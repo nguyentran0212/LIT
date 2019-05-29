@@ -27,9 +27,10 @@ contract TestSite {
     function assignExperiment(bytes20 _expID) public{
         // Get a reference of the LIT to access the experiment record
         // (bytes20 id, address creator, string memory input, string memory measurement, string memory code) = lit.experiments(_expID);
-        (, , , , string memory code) = lit.experiments(_expID);
-
-        emit experimentStaged(_expID, code);
+        // (, , , , string memory code) = lit.experiments(_expID);
+        // string memory code = "busy box";
+        // emit experimentStaged(_expID, code);
+        emit experimentStaged(_expID, "busy box");
     }
     
     function updateExperimentResult(bytes20 _expID, string memory _result) public {

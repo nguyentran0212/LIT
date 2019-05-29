@@ -7,9 +7,9 @@ const TestSiteDaemon = require('./TestSiteDaemon.js');
 var addrRPC = 'ws://localhost:7545';
 // In version 0.1, the artifacts are fetched directly from the folder
 var addrContractArtifact = "./";
-var addrLIT = '0xb95F27bD8304049037E54FB734839963847b5050';
+var addrLIT = '0xE29D2d57b927579f85a90B1c611350b86740875b';
 
-function bootstrap(ownerAcc) {
+function bootstrap(ownerAcc, addrTestSite = "") {
     let ABI;
     let bytecode;
     [ABI, bytecode] = fetchContractArtifact(addrContractArtifact);
@@ -18,7 +18,7 @@ function bootstrap(ownerAcc) {
 
     let web3 = createWeb3Instance(addrRPC);
 
-    deployTestSiteContract(web3, ABI, bytecode, capability, ownerAcc, addrLIT);
+    deployTestSiteContract(web3, ABI, bytecode, capability, ownerAcc, addrLIT, addrTestSite);
     // startDaemon(web3, contract);
 }
 
@@ -29,6 +29,12 @@ function fetchContractArtifact(_addrContractArtifact){
     
     let myContractBytecode = fs.readFileSync(_addrContractArtifact.concat("testsite.bin").toString());
     // let myContractBytecode = fs.readFileSync(_addrContractArtifact.concat("testsite.bin"));
+
+    // Loading using the JSON file created by Truffle instead
+    let myContractArtifact = JSON.parse(fs.readFileSync(_addrContractArtifact.concat("TestSite.json")).toString());
+    myContractABI = myContractArtifact.abi;
+    myContractBytecode = myContractArtifact.bytecode;
+
     return [myContractABI, myContractBytecode];
 }
 
@@ -44,56 +50,27 @@ function determineCapability(){
     return "basic";
 }
 
-function deployTestSiteContract(_web3Instance, _ABI, _bytecode, _capability, _addrOwner, _addrLIT){
+function deployTestSiteContract(_web3Instance, _ABI, _bytecode, _capability, _addrOwner, _addrLIT, _addrTestSite){
     let web3 = _web3Instance;
     let contractInstance;
+
+    if(_addrTestSite == ""){
+        testSiteContract = new web3.eth.Contract(_ABI);
+        testSiteContract.deploy({
+            data : _bytecode,
+            arguments : [_capability, _addrLIT]
+        }).send({
+            from : _addrOwner,
+            gas : 800000,
+        }).then((instance) => {
+            startDaemon(web3, instance);
+        });
+    } else {
+        testSiteContract = new web3.eth.Contract(_ABI, _addrTestSite);
+        // testSiteContract.address = _addrTestSite;
+        startDaemon(web3, testSiteContract);
+    }
     
-    // Confirmed that all inputs are correct
-    // console.log(_web3Instance);
-    // console.log(_ABI);
-    // console.log(_bytecode);
-    // console.log(_capability);
-    // console.log(_addrOwner);
-    // console.log(_addrLIT);
-
-    testSiteContract = new web3.eth.Contract(_ABI);
-    // console.log(contract);
-
-    // return contract.deploy({
-    //     data : _bytecode,
-    //     arguments: [_capability, _addrLIT]
-    // }).then((instance) => {
-    //     contractInstance = instance;
-    //     return contractInstance;
-    // });
-
-    // Calling this will generate a transaction object.
-    // Calling send() will deploy the transaction object. This method will return a promise, which would resolve with the new contract instance
-    // testSiteContract.deploy({
-    //     data : _bytecode,
-    //     arguments : [_capability, _addrLIT]
-    // }).send({
-    //     from : _addrOwner,
-    //     gas : 800000
-    // }).on('error', (error) => { console.log("error when sending transaction") })
-    // .on('transactionHash', (transactionHash) => { console.log(transactionHash) })
-    // .on('receipt', (receipt) => {
-    //    console.log(receipt.contractAddress) // contains the new contract address
-    // })
-    // .on('confirmation', (confirmationNumber, receipt) => { console.log(confirmationNumber) }).then(() => {
-    //     console.log("reached then()")
-    //     console.log(instance)
-    // });
-
-    testSiteContract.deploy({
-        data : _bytecode,
-        arguments : [_capability, _addrLIT]
-    }).send({
-        from : _addrOwner,
-        gas : 800000,
-    }).then((instance) => {
-        startDaemon(web3, instance);
-    });
     
     // contract.deploy({
     //     data: _bytecode,
@@ -115,4 +92,4 @@ function startDaemon(_web3Instance, _web3ContractInstance){
     _daemon.startDaemon();
 }
 
-bootstrap("0xe4c1226f9a698926e94a551EdBb00AC65375B879");
+bootstrap("0x3A58A6aA3a8DE9f0F20F593fE04155021f43Ad5a", "0xE06d51d68aaD01895530d7E44449b3B159d6fB1f");

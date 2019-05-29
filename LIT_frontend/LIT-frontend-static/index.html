@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Create an experiment</title>
+    </head>
+    <body>
+        <header>
+            <div class="hero-text-box">
+                <h1>Create your new experiment</h1>
+            </div>
+        </header>
+
+        <section>
+            <h2>Basic Info</h2>
+            <p>Let the world know more about your experiment.</p>
+            <input type="text" name="name" id="name" placeholder="Your experiment's name">
+            <input type="text" name="homepage" id="homepage" placeholder="Where to find out more about your experiment">
+            <input type="text" name="artifact" id="artifact" placeholder="Additional artifacts">
+        </section>
+
+        <section>
+            <h2>Experiment Code</h2>
+            <p>How we can reach it.</p>
+            <p>Let your experiment be found, be it on a public or a private repository.</p>
+            <div class="box-option">
+                <p>Docker Hub</p>
+                <p>Retrieve your experiment code from Docker Hub</p>
+            </div>
+            <div class="box-option">
+                <p>Private Registry</p>
+                <p>Retrieve your experiment code from a private registry</p>
+            </div>
+            <div class="box-option">
+                <p>IPFS</p>
+                <p>Retrieve your experiment code from an IPFS cluster</p>
+            </div>
+            <input type="text" name="codeLocator" id="codeLocator" placeholder="Locator">
+        </section>
+
+        <section>
+            <h2>Experiment Input</h2>
+            <p>What to feed your experiment.</p>
+            <p>Your experiment needs data. Test sites can provide.</p>
+            <div class="box-option">
+                <p>System Metrics</p>
+                <p>Performance of your testsite. For double checking the connectivity.</p>
+            </div>
+            <div class="box-option">
+                <p>One TI CC1350</p>
+                <p>Connect to one multi-modal sensor.</p>
+            </div>
+            <div class="box-option">
+                <p>Customised input</p>
+                <p>Define more fine-grained input requirement.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Experiment Output</h2>
+            <p>What to measure from your experiment.</p>
+            <p>You ask, test sites provide. Immutable and transparent.</p>
+            <div class="box-option">
+                <p>Access</p>
+                <p>Access your code remotely. So you know it works.</p>
+            </div>
+            <div class="box-option">
+                <p>Performance Metrics</p>
+                <p>Measure your code's performance on a test site.</p>
+            </div>
+            <div class="box-option">
+                <p>Customised output</p>
+                <p>Define more fine-grained output requirement.</p>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h2>Almost there</h2>
+                <p>Your experiment is almost ready. Before moving on, please have double check all the details.</p>
+                <p>In the next step, your wallet would ask you to approve a transaction, so that LIT can deploy your experiment on to the chain.</p>
+                <button>Create the Experiment</button>
+            </div>
+        </section>
+
+    </body>
+</html>
