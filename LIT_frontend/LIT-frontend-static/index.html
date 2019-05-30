@@ -13,64 +13,97 @@
         <section>
             <h2>Basic Info</h2>
             <p>Let the world know more about your experiment.</p>
-            <input type="text" name="name" id="name" placeholder="Your experiment's name">
-            <input type="text" name="homepage" id="homepage" placeholder="Where to find out more about your experiment">
-            <input type="text" name="artifact" id="artifact" placeholder="Additional artifacts">
+            <input type="text" name="_name" id="name" placeholder="Your experiment's name">
+            <input type="text" name="_homepage" id="homepage" placeholder="Where to find out more about your experiment">
+            <input type="text" name="_artifact" id="artifact" placeholder="Additional artifacts">
         </section>
 
         <section>
             <h2>Experiment Code</h2>
             <p>How we can reach it.</p>
             <p>Let your experiment be found, be it on a public or a private repository.</p>
-            <div class="box-option">
-                <p>Docker Hub</p>
-                <p>Retrieve your experiment code from Docker Hub</p>
-            </div>
-            <div class="box-option">
-                <p>Private Registry</p>
-                <p>Retrieve your experiment code from a private registry</p>
-            </div>
-            <div class="box-option">
-                <p>IPFS</p>
-                <p>Retrieve your experiment code from an IPFS cluster</p>
-            </div>
-            <input type="text" name="codeLocator" id="codeLocator" placeholder="Locator">
+            <fieldset>
+                    <div class="box-option">
+                            <input type="radio" name="experiment.option" id="experiment-radio-DHub" value="DHub" checked=True/>
+                            <div>
+                                <h3>Docker Hub</h3>
+                                <label for="experiment-radio-DHub">Retrieve your experiment code from Docker Hub</label>
+                            </div>
+                        </div>
+                        <div class="box-option">
+                            <input type="radio" name="experiment.option" id="experiment-radio-PHub" value="PHub"/>
+                            <div>
+                                <h3>Private Registry</h3>
+                                <label for="experiment-radio-PHub">Retrieve your experiment code from a private registry</label>
+                            </div>
+                        </div>
+                        <div class="box-option">
+                            <input type="radio" name="experiment.option" id="experiment-radio-IPFS" value="IPFS"/>
+                            <div>
+                                <h3>IPFS</h3>
+                                <label for="experiment-radio-IPFS">Retrieve your experiment code from an IPFS cluster</label>
+                            </div>
+                        </div>
+                        <input type="text" name="_codeLocator" id="experiment-locator" placeholder="Locator">
+            </fieldset>
         </section>
 
         <section>
             <h2>Experiment Input</h2>
             <p>What to feed your experiment.</p>
             <p>Your experiment needs data. Test sites can provide.</p>
-            <div class="box-option">
-                <p>System Metrics</p>
-                <p>Performance of your testsite. For double checking the connectivity.</p>
-            </div>
-            <div class="box-option">
-                <p>One TI CC1350</p>
-                <p>Connect to one multi-modal sensor.</p>
-            </div>
-            <div class="box-option">
-                <p>Customised input</p>
-                <p>Define more fine-grained input requirement.</p>
-            </div>
+            <fieldset>
+                    <div class="box-option">
+                            <input type="radio" name="input.option" id="input-radio-metrics" checked=True value="metrics"/>
+                            <div>
+                                <h3>System Metrics</h3>
+                                <label for="input-radio-metrics">Performance of your testsite. For double checking the connectivity.</label>
+                            </div>
+                        </div>
+                        <div class="box-option">
+                            <input type="radio" name="input.option" id="input-radio-TI" value="TI"/>
+                            <div>
+                                <h3>One TI CC1350</h3>
+                                <label for="input-radio-TI">Connect to one multi-modal sensor.</label>
+                            </div>
+                        </div>
+                        <div class="box-option">
+                            <input type="radio" name="input.option" id="input-radio-customised" value="customised"/>
+                            <div>
+                                <h3>Customised input</h3>
+                                <label for="input-radio-customised">Define more fine-grained input requirement.</label>
+                            </div>
+                        </div>
+            </fieldset>
         </section>
 
         <section>
             <h2>Experiment Output</h2>
             <p>What to measure from your experiment.</p>
             <p>You ask, test sites provide. Immutable and transparent.</p>
-            <div class="box-option">
-                <p>Access</p>
-                <p>Access your code remotely. So you know it works.</p>
-            </div>
-            <div class="box-option">
-                <p>Performance Metrics</p>
-                <p>Measure your code's performance on a test site.</p>
-            </div>
-            <div class="box-option">
-                <p>Customised output</p>
-                <p>Define more fine-grained output requirement.</p>
-            </div>
+            <fieldset>
+                    <div class="box-option">
+                            <input type="radio" name="output.option" id="output-radio-access" checked=True value="access"/>
+                            <div>
+                                <h3>Access</h3>
+                                <label for="output-radio-access">Access your code remotely. So you know it works.</label>
+                            </div>
+                        </div>
+                        <div class="box-option">
+                            <input type="radio" name="output.option" id="output-radio-metrics" value="metrics"/>
+                            <div>
+                                <h3>Performance Metrics</h3>
+                                <label for="output-radio-metrics">Measure your code's performance on a test site.</label>
+                            </div>
+                        </div>
+                        <div class="box-option">
+                            <input type="radio" name="output.option" id="output-radio-customised" value="customised"/>
+                            <div>
+                                <h3>Customised output</h3>
+                                <label for="output-radio-customised">Define more fine-grained output requirement.</label>
+                            </div>
+                        </div>
+            </fieldset>
         </section>
 
         <section>
@@ -88,6 +121,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/web3.min.js"></script>
     <script src="js/truffle-contract.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/app-create-exp.js"></script>
     </body>
 </html>

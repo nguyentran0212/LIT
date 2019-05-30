@@ -3,13 +3,18 @@
 const Web3 = require('web3');
 // const Daemon = require('./TestSiteDaemon.js')
 const TestSiteDaemon = require('./TestSiteDaemon.js');
+const fs = require('fs');
 
-var addrRPC = 'ws://localhost:7545';
-// In version 0.1, the artifacts are fetched directly from the folder
-var addrContractArtifact = "./";
-var addrLIT = '0xE29D2d57b927579f85a90B1c611350b86740875b';
 
-function bootstrap(ownerAcc, addrTestSite = "") {
+function bootstrap() {
+    var configMW = JSON.parse(fs.readFileSync("./mw-config.json").toString());
+    var ownerAcc = configMW.ownerAcc;
+    var addrTestSite = configMW.addrTestSite;
+    var addrLIT = configMW.addrLIT;
+    var addrRPC = configMW.addrRPC;
+    // In version 0.1, the artifacts are fetched directly from the folder
+    var addrContractArtifact = configMW.addrContractArtifact;
+
     let ABI;
     let bytecode;
     [ABI, bytecode] = fetchContractArtifact(addrContractArtifact);
@@ -23,11 +28,11 @@ function bootstrap(ownerAcc, addrTestSite = "") {
 }
 
 function fetchContractArtifact(_addrContractArtifact){
-    const fs = require('fs');
-    let myContractABI = JSON.parse(fs.readFileSync(_addrContractArtifact.concat("testsite.abi")).toString());
+
+    // let myContractABI = JSON.parse(fs.readFileSync(_addrContractArtifact.concat("testsite.abi")).toString());
     // let myContractABI = fs.readFileSync(_addrContractArtifact.concat("testsite.abi")).toString();
     
-    let myContractBytecode = fs.readFileSync(_addrContractArtifact.concat("testsite.bin").toString());
+    // let myContractBytecode = fs.readFileSync(_addrContractArtifact.concat("testsite.bin").toString());
     // let myContractBytecode = fs.readFileSync(_addrContractArtifact.concat("testsite.bin"));
 
     // Loading using the JSON file created by Truffle instead
@@ -63,12 +68,12 @@ function deployTestSiteContract(_web3Instance, _ABI, _bytecode, _capability, _ad
             from : _addrOwner,
             gas : 800000,
         }).then((instance) => {
-            startDaemon(web3, instance);
+            startDaemon(web3, instance, _addrOwner);
         });
     } else {
         testSiteContract = new web3.eth.Contract(_ABI, _addrTestSite);
         // testSiteContract.address = _addrTestSite;
-        startDaemon(web3, testSiteContract);
+        startDaemon(web3, testSiteContract, _addrOwner);
     }
     
     
@@ -85,11 +90,11 @@ function deployTestSiteContract(_web3Instance, _ABI, _bytecode, _capability, _ad
 
 }
 
-function startDaemon(_web3Instance, _web3ContractInstance){
+function startDaemon(_web3Instance, _web3ContractInstance, _addrOwner){
     // console.log(_web3ContractInstance);
     // _daemon = new Daemon.TestSiteDaemon(_web3Instance, _web3ContractInstance);
-    _daemon = new TestSiteDaemon(_web3Instance, _web3ContractInstance);
+    _daemon = new TestSiteDaemon(_web3Instance, _web3ContractInstance, _addrOwner);
     _daemon.startDaemon();
 }
 
-bootstrap("0x3A58A6aA3a8DE9f0F20F593fE04155021f43Ad5a", "0xE06d51d68aaD01895530d7E44449b3B159d6fB1f");
+bootstrap();

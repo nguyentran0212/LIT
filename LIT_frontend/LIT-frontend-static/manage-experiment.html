@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Manage experiments</title>
+    </head>
+    <body>
+        <header>
+            <div class="hero-text-box">
+                <h1>Here's your experiments</h1>
+                <p>Your experiments are here to stay. Immutably. Eternally.</p>
+            </div>
+        </header>
+
+        <div id="expList">
+            <!-- EXPERIMENT LOAD HERE -->
+        </div>
+
+        <div id="expTemplate" style="display: none">
+            <h3>Experiment <span class="experiment-id">Exp ID</span></h3>
+            <p>By <span class="experiment-creator">Creator account</span></p>
+            <p>Homepage: <span class="experiment-homepage">experiment homepage</span></p>
+            <p>Artifact: <span class="experiment-artifact">experiment artifact</span></p>
+            <p>Code: <span class="experiment-code">experiment code</span></p>
+            <p>Input: <span class="experiment-input">experiment input</span></p>
+            <p>Measurement: <span class="experiment-measurement">experiment measurement</span></p>
+            <h4>Result</h4>
+            <ul class="experiment-results">
+                <!-- List of experiments come here -->
+            </ul>
+        </div>
+
+        <div id="expResultTemplate" style="display: none">
+            <p>Test site <span>test site ID</span>: <span>testsite result</span></p>
+        </div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/web3.min.js"></script>
+        <script src="js/truffle-contract.js"></script>
+        <script src="js/app-manage-exp.js"></script>
+    </body>
+</html>
