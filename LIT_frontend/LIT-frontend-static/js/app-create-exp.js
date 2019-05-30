@@ -12,8 +12,8 @@ App = {
     measurement: "",
     code : "",
   },
-  addrLIT : "0xfb5E753DD0d1E3A53cDBF15fa42a56fE84480e06",
-  creatorAcc : "0xED931f77eE703faB8CC41252505a10fA5200095b",
+  addrLIT : "",
+  creatorAcc : "",
 
   init: async function() {
     return await App.initWeb3();
@@ -56,7 +56,17 @@ App = {
     }
     web3 = new Web3(App.web3Provider)
 
-    return App.initContract();
+    return App.initAddresses();
+  },
+
+  initAddresses: function () {
+    $.getJSON('js/config-frontend.json', function(data){
+      // Init LIT address and sender address from a JSON file for simplicity
+      App.addrLIT = data.addrLIT;
+      App.creatorAcc = data.creatorAcc;
+
+      return App.initContract();
+    })
   },
 
   initContract: function() {

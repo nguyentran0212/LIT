@@ -1,7 +1,7 @@
 {
-    "ownerAcc" : "0x54eD156288a212501FcB3588E4c3eE4398b51a70",
+    "ownerAcc" : "0x05C3D22e44DB112B9A0EEE409D34F9A5031Eb80B",
     "addrTestSite" : "",
-    "addrLIT" : "0xfb5E753DD0d1E3A53cDBF15fa42a56fE84480e06",
+    "addrLIT" : "0xf50bb5C1309b89124FDfC9aD58dDcd207a3Ae9A7",
     "addrRPC" : "ws://localhost:7545",
     "addrContractArtifact" : "./"
 }

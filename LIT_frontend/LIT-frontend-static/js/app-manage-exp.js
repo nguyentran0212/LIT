@@ -1,8 +1,8 @@
 App = {
   web3Provider: null,
   contracts: {},
-  addrLIT : "0xfb5E753DD0d1E3A53cDBF15fa42a56fE84480e06",
-  creatorAcc : "0xED931f77eE703faB8CC41252505a10fA5200095b",
+  addrLIT : "",
+  creatorAcc : "",
   experimentList : [],
 
   init: async function() {
@@ -46,7 +46,17 @@ App = {
     }
     web3 = new Web3(App.web3Provider)
 
-    return App.initContract();
+    return App.initAddresses();
+  },
+
+  initAddresses: function () {
+    $.getJSON('js/config-frontend.json', function(data){
+      // Init LIT address and sender address from a JSON file for simplicity
+      App.addrLIT = data.addrLIT;
+      App.creatorAcc = data.creatorAcc;
+
+      return App.initContract();
+    })
   },
 
   initContract: function() {
@@ -105,26 +115,12 @@ App = {
           var expID = value;
           console.log("From user experiment " + expID);
 
-          // Then retrieve the experiment results
-          
-          contractInstance.getRespondedTestSites.call(expID).then(value => {
-            var respondedTestSites = value;
-            for(var j = 0; j < respondedTestSites.length; j++){
-              addrTestSite = respondedTestSites[j];
-              console.log(expID + " - " + addrTestSite);
-              
-              contractInstance.getExperimentResults.call(expID, respondedTestSites[j]).then(value => {
-                console.log(addrTestSite + " - " + value);
-              })
-            }
-          });
-
           // Then retrieve the experiment itself
           contractInstance.experiments.call(expID).then(value => {
             // Create an instance
             var exp = {
               id: value[0],
-              state : value[1].c[0],
+              state : value[1].toNumber(),
               name : "",
               creator: value[2],
               homepage: value[3],
@@ -142,6 +138,19 @@ App = {
 
             // INSTEAD, WE NEED TO ADD EXP DIRECTLY TO GUI ONE BY ONE
             App.addExperimentToHTML(exp);
+
+            contractInstance.getNumberOfResults.call(expID).then(value => {
+              var numOfResults = value.toNumber();
+              if(numOfResults == 0) {
+                App.addNoTestResultMessageToHTML(exp.id)
+              } else {
+                for(var j = 0; j < numOfResults; j ++ ){
+                  contractInstance.getExperimentResult.call(expID, j).then(value => {
+                    App.addTestSiteResultToHTML(exp.id, value[0], value[1]);
+                  });
+                }
+              }
+            })
           })
         });
       }
@@ -163,12 +172,25 @@ App = {
     expTemplate.find('.experiment-code').text(_exp.code);
     expTemplate.find('.experiment-input').text(_exp.input);
     expTemplate.find('.experiment-measurement').text(_exp.measurement);
+    expTemplate.find('.experiment').attr("data-expid", _exp.id);
 
     expList.append(expTemplate.html());
   },
   
-  addTestSiteResultToHTML : function (_exp) {
+  addTestSiteResultToHTML : function (_exp, _addrTestSite, _result) {
+    var experimentDiv = $('.experiment[data-expid="'+ _exp +'"]');
+    var experimentResultDiv = experimentDiv.find('.experiment-results');
 
+    var experimentResultTemplate = $('#expResultTemplate');
+    experimentResultTemplate.find('.expResult-address').text(_addrTestSite);
+    experimentResultTemplate.find('.expResult-result').text(_result);
+    experimentResultDiv.html("").append(experimentResultTemplate.html());
+  },
+
+  addNoTestResultMessageToHTML : function(_exp) {
+    var experimentDiv = $('.experiment[data-expid="'+ _exp +'"]');
+    var experimentResultDiv = experimentDiv.find('.experiment-results');
+    experimentResultDiv.append("<p>Experiment is still pending.<p>")
   },
 
 };

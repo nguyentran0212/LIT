@@ -11,26 +11,31 @@
             </div>
         </header>
 
+        <a href="./index.html">Create new experiment</a>
+
         <div id="expList">
             <!-- EXPERIMENT LOAD HERE -->
         </div>
 
-        <div id="expTemplate" style="display: none">
-            <h3>Experiment <span class="experiment-id">Exp ID</span></h3>
-            <p>By <span class="experiment-creator">Creator account</span></p>
-            <p>Homepage: <span class="experiment-homepage">experiment homepage</span></p>
-            <p>Artifact: <span class="experiment-artifact">experiment artifact</span></p>
-            <p>Code: <span class="experiment-code">experiment code</span></p>
-            <p>Input: <span class="experiment-input">experiment input</span></p>
-            <p>Measurement: <span class="experiment-measurement">experiment measurement</span></p>
-            <h4>Result</h4>
-            <ul class="experiment-results">
-                <!-- List of experiments come here -->
-            </ul>
+        <div id="expTemplate" style="display: none" data-expid="">
+            <div class="experiment">
+                <h3>Experiment <span class="experiment-id">Exp ID</span></h3>
+                <p>By <span class="experiment-creator">Creator account</span></p>
+                <p>Homepage: <span class="experiment-homepage">experiment homepage</span></p>
+                <p>Artifact: <span class="experiment-artifact">experiment artifact</span></p>
+                <p>Code: <span class="experiment-code">experiment code</span></p>
+                <p>Input: <span class="experiment-input">experiment input</span></p>
+                <p>Measurement: <span class="experiment-measurement">experiment measurement</span></p>
+                <h4>Result</h4>
+                <div class="experiment-results">
+                </div>
+            </div>
         </div>
 
         <div id="expResultTemplate" style="display: none">
-            <p>Test site <span>test site ID</span>: <span>testsite result</span></p>
+            <ul>
+                <li>Test site <span class="expResult-address">test site ID</span> - <span class="expResult-result">testsite result</span></li>
+            </ul>
         </div>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

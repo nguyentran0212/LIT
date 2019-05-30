@@ -47,10 +47,14 @@ contract LIT {
         string input;
         string measurement;
         string code;
-        // Mapping between testsite and the results that they return
-        address[] respondedTestSites;
-        mapping (address => string) results;
     }
+
+    struct ExperimentResult {
+        address respondedTestSite;
+        string result;
+    }
+    
+    mapping(bytes20 => ExperimentResult[]) results;
 
     // Mapping between capabilities and relevant testsites
     // TEMPORARY NOT USING THIS ONE IN VERSION 0.1 DUE TO SECURITY ISSUE WITH INLINE ASSEMBLY
@@ -83,13 +87,12 @@ contract LIT {
         testSites.push(msg.sender);
     }
     
-    function getRespondedTestSites(bytes20 _expID) public returns (address[] memory) {
-        address[] memory testsites = experiments[_expID].respondedTestSites;
-        return testsites;
+    function getNumberOfResults(bytes20 _expID) public view returns (uint) {
+        return results[_expID].length;
     }
     
-    function getExperimentResults(bytes20 _expID, address _addrTestSite) public returns (string memory)  {
-        return experiments[_expID].results[_addrTestSite];
+    function getExperimentResult(bytes20 _expID, uint index) public view returns (address, string memory) {
+        return (results[_expID][index].respondedTestSite, results[_expID][index].result);
     }
     
     function createExperiment(string memory _homepage, string memory _relatedArtifact, string memory _input, string memory _measurement, string memory _code) public returns(bytes20 expID) {
@@ -101,7 +104,7 @@ contract LIT {
         userExperiments[userAddr].push(expID);
         
         // Create and store an experiment struct
-        experiments[expID] = Experiment(expID, 0, userAddr, _homepage, _relatedArtifact, _input, _measurement, _code, new address[](0));
+        experiments[expID] = Experiment(expID, 0, userAddr, _homepage, _relatedArtifact, _input, _measurement, _code);
         
         // Emit an event to acknowledge that the experiemnt has been submitted.
         emit experimentSubmitted(expID);
@@ -118,9 +121,6 @@ contract LIT {
         // Check if the caller is the owner of the experiment
         // require(msg.sender == experiments[_expID].creator, "Only the creator of an experiment can start it.");
         
-        // Get a reference of the experiment to conduct
-        Experiment storage experiment = experiments[_expID];
-        
         // Find test sites that can satisfy the experiment input and measurement requirements
         // TEMPORARY DISABLE MAPPING LOOK UP DUE TO SECURITY ISSUE WITH INLINE ASSEMBLY
         // address[] memory relevantSites = capabilityTestSites[stringToBytes32(experiment.measurement)];
@@ -130,12 +130,9 @@ contract LIT {
         
         // For each relevant test site
         for (uint i = 0; i < relevantSites.length; i++) {
-            // Assign the address of those testsites to the experiment
-            experiment.results[relevantSites[i]] = "";
             // Call assign experiment from testSite
             TestSite ts = TestSite(relevantSites[i]);
             ts.assignExperiment(_expID);
-            experiments[_expID].respondedTestSites.push(relevantSites[i]);
         }
         
         // Update the state of experiment
@@ -154,8 +151,8 @@ contract LIT {
         
         // Update the experiment
         address testSiteAddr = msg.sender;
-        experiments[_expID].results[testSiteAddr] = _result;
         experiments[_expID].state = 2;
+        results[_expID].push(ExperimentResult(testSiteAddr, _result));
         
         emit experimentCompleted(_expID);
     }

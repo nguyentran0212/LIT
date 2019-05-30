@@ -56,14 +56,23 @@ class DaemonClass {
         console.log("\nInside executeExperiment method:");
         console.log("ExpID:" + this.web3.utils.bytesToHex(_expID));
         console.log("Exp code: " + _code);
+        console.log("NO DOCKER AT THE MOMENT!")
 
+        // TEMPORARY DISABLE DOCKER DUE TO DEVELOPMENT ENVIRONMENT
         const Docker = require('dockerode');
         const docker = new Docker();
-        docker.createContainer({Image: "busybox", Cmd: []}, function (err, container) {
+        docker.createContainer({Image: "gecko8/lite-server", Cmd: [], "HostConfig": {
+            "PortBindings": {
+            "3000/tcp": [
+                {
+                "HostPort": "5000"   //Map container to a random unused port.
+                }
+            ]
+            }, "Binds": ["/Users/trannguyen/Documents/CodeProjects/LIT/LIT_MW/sample/web-template:/src"]}}, function (err, container) {
             if(!err){
                 container.start(function (err, data) {
                     console.log('container started')
-                  //...
+                    //...
                 });
             } else {
                 console.log(err)
@@ -80,7 +89,7 @@ class DaemonClass {
         console.log("ExpID:" + this.web3.utils.bytesToHex(_expID));
 
         // VERSION 0.1 HAVE HARDCODED RESULT. IT IS ONLY FOR DEMONSTRATION PURPOSE
-        let result = "http://127.0.0.1/my-result";
+        let result = "http://127.0.0.1:5000";
         this.reportExperimentResult(_expID, result);
     }
 
