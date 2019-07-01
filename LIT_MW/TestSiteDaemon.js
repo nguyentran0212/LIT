@@ -1,3 +1,6 @@
+/* The DaemonClass represents a daemon that control the underlying testsite infrastructure based on instructions from the smart contract. 
+    Its prime responsiblity is to call the underlying Docker Engine. 
+*/
 class DaemonClass {
     constructor(_web3, _contractInstance, _addrOwner){
         this.web3 = _web3;
@@ -23,8 +26,6 @@ class DaemonClass {
                 console.log("Exp code: " + code);
 
                 this.conductExperiment(expID, code);
-                
-
             } else {
                 console.log(error);
             }
