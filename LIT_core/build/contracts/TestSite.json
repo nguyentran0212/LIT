@@ -66,28 +66,28 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"_expID\",\"type\":\"bytes20\"}],\"name\":\"assignExperiment\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_expID\",\"type\":\"bytes20\"},{\"name\":\"_result\",\"type\":\"string\"}],\"name\":\"updateExperimentResult\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"_capability\",\"type\":\"string\"},{\"name\":\"_addrLIT\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"expID\",\"type\":\"bytes20\"},{\"indexed\":false,\"name\":\"code\",\"type\":\"string\"}],\"name\":\"experimentStaged\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/trannguyen/Documents/CodeProjects/LIT/LIT_core/contracts/LIT.sol\":\"TestSite\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/trannguyen/Documents/CodeProjects/LIT/LIT_core/contracts/LIT.sol\":{\"keccak256\":\"0x262c23f9474634dfeb179b4f59878137b9d103cf22ab529c8f883bbc0bf52215\",\"urls\":[\"bzzr://32fb1a2b330f5394f59a5866d5b9e46efade1f26a192a9222808fae83d1d2cb5\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5060405161099f38038061099f8339810180604052604081101561003357600080fd5b81019080805164010000000081111561004b57600080fd5b8281019050602081018481111561006157600080fd5b815185600182028301116401000000008211171561007e57600080fd5b505092919060200180519060200190929190505050806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff16600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550816003908051906020019061014b9291906102a2565b5033600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663caba5cdf836040518263ffffffff167c01000000000000000000000000000000000000000000000000000000000281526004018080602001828103825283818151815260200191508051906020019080838360005b8381101561023757808201518184015260208101905061021c565b50505050905090810190601f1680156102645780820380516001836020036101000a031916815260200191505b5092505050600060405180830381600087803b15801561028357600080fd5b505af1158015610297573d6000803e3d6000fd5b505050505050610347565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106102e357805160ff1916838001178555610311565b82800160010185558215610311579182015b828111156103105782518255916020019190600101906102f5565b5b50905061031e9190610322565b5090565b61034491905b80821115610340576000816000905550600101610328565b5090565b90565b610649806103566000396000f3fe60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680635a4c1bf91461005157806362cd885a1461009b575b600080fd5b34801561005d57600080fd5b506100996004803603602081101561007457600080fd5b8101908080356bffffffffffffffffffffffff1916906020019092919050505061017c565b005b3480156100a757600080fd5b5061017a600480360360408110156100be57600080fd5b8101908080356bffffffffffffffffffffffff19169060200190929190803590602001906401000000008111156100f457600080fd5b82018360208201111561010657600080fd5b8035906020019184600183028401116401000000008311171561012857600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506104e5565b005b6060600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166306c2fab6836040518263ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180826bffffffffffffffffffffffff19166bffffffffffffffffffffffff1916815260200191505060006040518083038186803b15801561022b57600080fd5b505afa15801561023f573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525061010081101561026a57600080fd5b8101908080519060200190929190805190602001909291908051906020019092919080516401000000008111156102a057600080fd5b828101905060208101848111156102b657600080fd5b81518560018202830111640100000000821117156102d357600080fd5b505092919060200180516401000000008111156102ef57600080fd5b8281019050602081018481111561030557600080fd5b815185600182028301116401000000008211171561032257600080fd5b5050929190602001805164010000000081111561033e57600080fd5b8281019050602081018481111561035457600080fd5b815185600182028301116401000000008211171561037157600080fd5b5050929190602001805164010000000081111561038d57600080fd5b828101905060208101848111156103a357600080fd5b81518560018202830111640100000000821117156103c057600080fd5b505092919060200180516401000000008111156103dc57600080fd5b828101905060208101848111156103f257600080fd5b815185600182028301116401000000008211171561040f57600080fd5b50509291905050509750505050505050507e778e9fa0ba34f99199cfee2f120c8c7e2296d3d4fb4d1b4c2556cfa2a6fc11828260405180836bffffffffffffffffffffffff19166bffffffffffffffffffffffff1916815260200180602001828103825283818151815260200191508051906020019080838360005b838110156104a657808201518184015260208101905061048b565b50505050905090810190601f1680156104d35780820380516001836020036101000a031916815260200191505b50935050505060405180910390a15050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16633fafc99983836040518363ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180836bffffffffffffffffffffffff19166bffffffffffffffffffffffff1916815260200180602001828103825283818151815260200191508051906020019080838360005b838110156105b4578082015181840152602081019050610599565b50505050905090810190601f1680156105e15780820380516001836020036101000a031916815260200191505b509350505050600060405180830381600087803b15801561060157600080fd5b505af1158015610615573d6000803e3d6000fd5b50505050505056fea165627a7a723058208140b201d51953f850d50d6eb07b9d2d82053ba48d7c6dd5873062525984e9310029",
-  "deployedBytecode": "0x60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680635a4c1bf91461005157806362cd885a1461009b575b600080fd5b34801561005d57600080fd5b506100996004803603602081101561007457600080fd5b8101908080356bffffffffffffffffffffffff1916906020019092919050505061017c565b005b3480156100a757600080fd5b5061017a600480360360408110156100be57600080fd5b8101908080356bffffffffffffffffffffffff19169060200190929190803590602001906401000000008111156100f457600080fd5b82018360208201111561010657600080fd5b8035906020019184600183028401116401000000008311171561012857600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506104e5565b005b6060600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166306c2fab6836040518263ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180826bffffffffffffffffffffffff19166bffffffffffffffffffffffff1916815260200191505060006040518083038186803b15801561022b57600080fd5b505afa15801561023f573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525061010081101561026a57600080fd5b8101908080519060200190929190805190602001909291908051906020019092919080516401000000008111156102a057600080fd5b828101905060208101848111156102b657600080fd5b81518560018202830111640100000000821117156102d357600080fd5b505092919060200180516401000000008111156102ef57600080fd5b8281019050602081018481111561030557600080fd5b815185600182028301116401000000008211171561032257600080fd5b5050929190602001805164010000000081111561033e57600080fd5b8281019050602081018481111561035457600080fd5b815185600182028301116401000000008211171561037157600080fd5b5050929190602001805164010000000081111561038d57600080fd5b828101905060208101848111156103a357600080fd5b81518560018202830111640100000000821117156103c057600080fd5b505092919060200180516401000000008111156103dc57600080fd5b828101905060208101848111156103f257600080fd5b815185600182028301116401000000008211171561040f57600080fd5b50509291905050509750505050505050507e778e9fa0ba34f99199cfee2f120c8c7e2296d3d4fb4d1b4c2556cfa2a6fc11828260405180836bffffffffffffffffffffffff19166bffffffffffffffffffffffff1916815260200180602001828103825283818151815260200191508051906020019080838360005b838110156104a657808201518184015260208101905061048b565b50505050905090810190601f1680156104d35780820380516001836020036101000a031916815260200191505b50935050505060405180910390a15050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16633fafc99983836040518363ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180836bffffffffffffffffffffffff19166bffffffffffffffffffffffff1916815260200180602001828103825283818151815260200191508051906020019080838360005b838110156105b4578082015181840152602081019050610599565b50505050905090810190601f1680156105e15780820380516001836020036101000a031916815260200191505b509350505050600060405180830381600087803b15801561060157600080fd5b505af1158015610615573d6000803e3d6000fd5b50505050505056fea165627a7a723058208140b201d51953f850d50d6eb07b9d2d82053ba48d7c6dd5873062525984e9310029",
-  "sourceMap": "5135:1358:0:-;;;5596:275;8:9:-1;5:2;;;30:1;27;20:12;5:2;5596:275:0;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;5596:275:0;;;;;;19:11:-1;14:3;11:20;8:2;;;44:1;41;34:12;8:2;71:11;66:3;62:21;55:28;;123:4;118:3;114:14;159:9;141:16;138:31;135:2;;;182:1;179;172:12;135:2;219:3;213:10;330:9;325:1;311:12;307:20;289:16;285:43;282:58;261:11;247:12;244:29;233:115;230:2;;;361:1;358;351:12;230:2;0:372;;5596:275:0;;;;;;;;;;;;;;;;;5681:8;5671:7;;:18;;;;;;;;;;;;;;;;;;5709:7;;;;;;;;;;;5699:3;;:18;;;;;;;;;;;;;;;;;;5740:11;5727:10;:24;;;;;;;;;;;;:::i;:::-;;5773:10;5761:9;;:22;;;;;;;;;;;;;;;;;;5831:3;;;;;;;;;;;:20;;;5852:11;5831:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;5831:33:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;5831:33:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;5831:33:0;;;;5596:275;;5135:1358;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
-  "deployedSourceMap": "5135:1358:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;5881:468;;8:9:-1;5:2;;;30:1;27;20:12;5:2;5881:468:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;5881:468:0;;;;;;;;;;;;;;;;;;;;;;;6359:132;;8:9:-1;5:2;;;30:1;27;20:12;5:2;6359:132:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;6359:132:0;;;;;;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;6359:132:0;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;6359:132:0;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;6359:132:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;6359:132:0;;;;;;;;;;;;;;;;;;5881:468;6160:18;6182:3;;;;;;;;;;;:15;;;6198:6;6182:23;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;6182:23:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;6182:23:0;;;;;;39:16:-1;36:1;17:17;2:54;6182:23:0;101:4:-1;97:9;90:4;84;80:15;76:31;69:5;65:43;126:6;120:4;113:20;0:138;13:3;8;5:12;2:2;;;30:1;27;20:12;2:2;6182:23:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;19:11:-1;14:3;11:20;8:2;;;44:1;41;34:12;8:2;71:11;66:3;62:21;55:28;;123:4;118:3;114:14;159:9;141:16;138:31;135:2;;;182:1;179;172:12;135:2;219:3;213:10;330:9;325:1;311:12;307:20;289:16;285:43;282:58;261:11;247:12;244:29;233:115;230:2;;;361:1;358;351:12;230:2;0:372;;6182:23:0;;;;;;;19:11:-1;14:3;11:20;8:2;;;44:1;41;34:12;8:2;71:11;66:3;62:21;55:28;;123:4;118:3;114:14;159:9;141:16;138:31;135:2;;;182:1;179;172:12;135:2;219:3;213:10;330:9;325:1;311:12;307:20;289:16;285:43;282:58;261:11;247:12;244:29;233:115;230:2;;;361:1;358;351:12;230:2;0:372;;6182:23:0;;;;;;;19:11:-1;14:3;11:20;8:2;;;44:1;41;34:12;8:2;71:11;66:3;62:21;55:28;;123:4;118:3;114:14;159:9;141:16;138:31;135:2;;;182:1;179;172:12;135:2;219:3;213:10;330:9;325:1;311:12;307:20;289:16;285:43;282:58;261:11;247:12;244:29;233:115;230:2;;;361:1;358;351:12;230:2;0:372;;6182:23:0;;;;;;;19:11:-1;14:3;11:20;8:2;;;44:1;41;34:12;8:2;71:11;66:3;62:21;55:28;;123:4;118:3;114:14;159:9;141:16;138:31;135:2;;;182:1;179;172:12;135:2;219:3;213:10;330:9;325:1;311:12;307:20;289:16;285:43;282:58;261:11;247:12;244:29;233:115;230:2;;;361:1;358;351:12;230:2;0:372;;6182:23:0;;;;;;;19:11:-1;14:3;11:20;8:2;;;44:1;41;34:12;8:2;71:11;66:3;62:21;55:28;;123:4;118:3;114:14;159:9;141:16;138:31;135:2;;;182:1;179;172:12;135:2;219:3;213:10;330:9;325:1;311:12;307:20;289:16;285:43;282:58;261:11;247:12;244:29;233:115;230:2;;;361:1;358;351:12;230:2;0:372;;6182:23:0;;;;;;6145:60;;;;;;;;;6312:30;6329:6;6337:4;6312:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;6312:30:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;5881:468;;:::o;6359:132::-;6447:3;;;;;;;;;;;:20;;;6468:6;6476:7;6447:37;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;6447:37:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;6447:37:0;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;6447:37:0;;;;6359:132;;:::o",
-  "source": "pragma solidity ^0.5.0;\n\n\n\ncontract LIT {\n    // This struct represents an experiment to be conducted by LIT\n    struct Experiment {\n        bytes20 id;\n        uint state;\n        address creator;\n        string homepage;\n        string relatedArtifact;\n        string input;\n        string measurement;\n        string code;\n    }\n\n    struct ExperimentResult {\n        address respondedTestSite;\n        string result;\n    }\n    \n    mapping(bytes20 => ExperimentResult[]) results;\n\n    // Mapping between capabilities and relevant testsites\n    // TEMPORARY NOT USING THIS ONE IN VERSION 0.1 DUE TO SECURITY ISSUE WITH INLINE ASSEMBLY\n    // mapping (bytes32 => address[]) public capabilityTestSites;\n\n    address[] public testSites;\n\n    // Mapping between experiment and their ID\n    mapping (bytes20 => Experiment) public experiments;\n    // Mapping between address of LIT users and a nonce for creating experiment ID\n    // If nonce is 0, it means that this user has not started an experiment before\n    mapping (address => uint) public userNonce;\n\n    mapping(address => bytes20[]) public userExperiments;\n\n    event experimentSubmitted(\n        bytes20 expID\n    );\n    event experimentAssigned(\n        bytes20 expID\n    );\n    event experimentCompleted(\n        bytes20 expID\n    );\n    \n    enum ExperimentType {Created, Submitted, Assigned, Completed}\n\n    function registerTestSite(string memory _capability) public {\n        // capabilityTestSites[stringToBytes32(_capability)].push(msg.sender);\n        testSites.push(msg.sender);\n    }\n    \n    function getNumberOfResults(bytes20 _expID) public view returns (uint) {\n        return results[_expID].length;\n    }\n    \n    function getExperimentResult(bytes20 _expID, uint index) public view returns (address, string memory) {\n        return (results[_expID][index].respondedTestSite, results[_expID][index].result);\n    }\n    \n    function createExperiment(string memory _homepage, string memory _relatedArtifact, string memory _input, string memory _measurement, string memory _code) public returns(bytes20 expID) {\n        address userAddr = msg.sender;\n        \n        //Create expID by hashing the sender address with a nonce\n        expID = bytes20(keccak256(abi.encodePacked(userAddr, userNonce[userAddr])));\n        userNonce[userAddr]++;\n        userExperiments[userAddr].push(expID);\n        \n        // Create and store an experiment struct\n        experiments[expID] = Experiment(expID, 0, userAddr, _homepage, _relatedArtifact, _input, _measurement, _code);\n        \n        // Emit an event to acknowledge that the experiemnt has been submitted.\n        emit experimentSubmitted(expID);\n        \n        // FOR SIMPLICITY, VERSION 0.1 CALL CONDUCT EXPERIMENT DIRECTLY.\n        conductExperiment(expID);\n        // Return the expID;\n        return expID;\n    }\n    \n    function conductExperiment(bytes20 _expID) public {\n        // Check if the experiment ID exist\n        require(experiments[_expID].id != 0, \"The specified experiment does not exist.\");\n        // Check if the caller is the owner of the experiment\n        // require(msg.sender == experiments[_expID].creator, \"Only the creator of an experiment can start it.\");\n        \n        // Find test sites that can satisfy the experiment input and measurement requirements\n        // TEMPORARY DISABLE MAPPING LOOK UP DUE TO SECURITY ISSUE WITH INLINE ASSEMBLY\n        // address[] memory relevantSites = capabilityTestSites[stringToBytes32(experiment.measurement)];\n\n        // Assign the experiment to all registered testsites for now.\n        address[] memory relevantSites = testSites;\n        \n        // For each relevant test site\n        for (uint i = 0; i < relevantSites.length; i++) {\n            // Call assign experiment from testSite\n            TestSite ts = TestSite(relevantSites[i]);\n            ts.assignExperiment(_expID);\n        }\n        \n        // Update the state of experiment\n        experiments[_expID].state = 1;\n        emit experimentAssigned(_expID);\n    }\n    \n    function updateExperiment(bytes20 _expID, string memory _result) public {\n        // VERSION 0.1 DOES NOT HANDLE EXPERIMENT FAILURE. CODE WILL BE UPDATED WITH ALTERNATIVE SCENARIOS IN LATER VERSIONS\n\n        // Check if the expID exist\n        require(experiments[_expID].id != 0, \"The specified experiment does not exist.\");\n        \n        // Check if the caller is the assigned testsite\n        // TBA\n        \n        // Update the experiment\n        address testSiteAddr = msg.sender;\n        experiments[_expID].state = 2;\n        results[_expID].push(ExperimentResult(testSiteAddr, _result));\n        \n        emit experimentCompleted(_expID);\n    }\n    \n    \n    // Utility functions\n    // STOP USING THIS FUNCTION DUE TO INLINE ASSEMPLY ISSUE\n    // function stringToBytes32(string memory source) private returns (bytes32 result) {\n    //     bytes memory tempEmptyStringTest = bytes(source);\n    //     if (tempEmptyStringTest.length == 0) {\n    //         return 0x0;\n    //     }\n    \n    //     assembly {\n    //         result := mload(add(source, 32))\n    //     }\n    // }\n}\n\ncontract TestSite {\n    // Address of LIT core for registration and call back\n    address addrLIT;\n    LIT lit;\n    // Address of the owner of the testsite\n    address addrOwner;\n    // This string describe the capability of a testsite. Will update in the future with more description\n    string capability;\n    \n    // This event is for interacting with the client library on the infrastructure\n    event experimentStaged(bytes20 expID, string code);\n    \n    constructor (string memory _capability, address _addrLIT) public {\n        addrLIT = _addrLIT;\n        lit = LIT(addrLIT);\n        capability = _capability;\n        addrOwner = msg.sender;\n        \n        // Register with LIT\n        lit.registerTestSite(_capability);\n    }\n    \n    function assignExperiment(bytes20 _expID) public{\n        // Get a reference of the LIT to access the experiment record\n        // (bytes20 id, address creator, string memory input, string memory measurement, string memory code) = lit.experiments(_expID);\n        (, , , , , , , string memory code) = lit.experiments(_expID);\n        // string memory code = \"busy box\";\n        // emit experimentStaged(_expID, code);\n        emit experimentStaged(_expID, code);\n    }\n    \n    function updateExperimentResult(bytes20 _expID, string memory _result) public {\n        lit.updateExperiment(_expID, _result);\n    }\n}",
-  "sourcePath": "/Users/trannguyen/Documents/CodeProjects/LIT/LIT_core/contracts/LIT.sol",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"_expID\",\"type\":\"bytes20\"}],\"name\":\"assignExperiment\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_expID\",\"type\":\"bytes20\"},{\"name\":\"_result\",\"type\":\"string\"}],\"name\":\"updateExperimentResult\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"_capability\",\"type\":\"string\"},{\"name\":\"_addrLIT\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"expID\",\"type\":\"bytes20\"},{\"indexed\":false,\"name\":\"code\",\"type\":\"string\"}],\"name\":\"experimentStaged\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/trannguyen/Documents/CodeProjects/LIT/LIT_core/contracts/TestSite.sol\":\"TestSite\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/trannguyen/Documents/CodeProjects/LIT/LIT_core/contracts/TestSite.sol\":{\"keccak256\":\"0x101717053907ec5b3a07aec80a18857f83be47effce46729cf8afebf5ab434ae\",\"urls\":[\"bzzr://0f3a896bc506fbf1993dd8fb7c6e61735aa9a5c156d5b076af1644ce829471bf\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060405161099f38038061099f8339810180604052604081101561003357600080fd5b81019080805164010000000081111561004b57600080fd5b8281019050602081018481111561006157600080fd5b815185600182028301116401000000008211171561007e57600080fd5b505092919060200180519060200190929190505050806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff16600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550816003908051906020019061014b9291906102a2565b5033600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663caba5cdf836040518263ffffffff167c01000000000000000000000000000000000000000000000000000000000281526004018080602001828103825283818151815260200191508051906020019080838360005b8381101561023757808201518184015260208101905061021c565b50505050905090810190601f1680156102645780820380516001836020036101000a031916815260200191505b5092505050600060405180830381600087803b15801561028357600080fd5b505af1158015610297573d6000803e3d6000fd5b505050505050610347565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106102e357805160ff1916838001178555610311565b82800160010185558215610311579182015b828111156103105782518255916020019190600101906102f5565b5b50905061031e9190610322565b5090565b61034491905b80821115610340576000816000905550600101610328565b5090565b90565b610649806103566000396000f3fe60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680635a4c1bf91461005157806362cd885a1461009b575b600080fd5b34801561005d57600080fd5b506100996004803603602081101561007457600080fd5b8101908080356bffffffffffffffffffffffff1916906020019092919050505061017c565b005b3480156100a757600080fd5b5061017a600480360360408110156100be57600080fd5b8101908080356bffffffffffffffffffffffff19169060200190929190803590602001906401000000008111156100f457600080fd5b82018360208201111561010657600080fd5b8035906020019184600183028401116401000000008311171561012857600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506104e5565b005b6060600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166306c2fab6836040518263ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180826bffffffffffffffffffffffff19166bffffffffffffffffffffffff1916815260200191505060006040518083038186803b15801561022b57600080fd5b505afa15801561023f573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525061010081101561026a57600080fd5b8101908080519060200190929190805190602001909291908051906020019092919080516401000000008111156102a057600080fd5b828101905060208101848111156102b657600080fd5b81518560018202830111640100000000821117156102d357600080fd5b505092919060200180516401000000008111156102ef57600080fd5b8281019050602081018481111561030557600080fd5b815185600182028301116401000000008211171561032257600080fd5b5050929190602001805164010000000081111561033e57600080fd5b8281019050602081018481111561035457600080fd5b815185600182028301116401000000008211171561037157600080fd5b5050929190602001805164010000000081111561038d57600080fd5b828101905060208101848111156103a357600080fd5b81518560018202830111640100000000821117156103c057600080fd5b505092919060200180516401000000008111156103dc57600080fd5b828101905060208101848111156103f257600080fd5b815185600182028301116401000000008211171561040f57600080fd5b50509291905050509750505050505050507e778e9fa0ba34f99199cfee2f120c8c7e2296d3d4fb4d1b4c2556cfa2a6fc11828260405180836bffffffffffffffffffffffff19166bffffffffffffffffffffffff1916815260200180602001828103825283818151815260200191508051906020019080838360005b838110156104a657808201518184015260208101905061048b565b50505050905090810190601f1680156104d35780820380516001836020036101000a031916815260200191505b50935050505060405180910390a15050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16633fafc99983836040518363ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180836bffffffffffffffffffffffff19166bffffffffffffffffffffffff1916815260200180602001828103825283818151815260200191508051906020019080838360005b838110156105b4578082015181840152602081019050610599565b50505050905090810190601f1680156105e15780820380516001836020036101000a031916815260200191505b509350505050600060405180830381600087803b15801561060157600080fd5b505af1158015610615573d6000803e3d6000fd5b50505050505056fea165627a7a723058203c3466b3e93a6873ab3bf5651855948c91fac7a24df28ab366a554f0834d10fd0029",
+  "deployedBytecode": "0x60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680635a4c1bf91461005157806362cd885a1461009b575b600080fd5b34801561005d57600080fd5b506100996004803603602081101561007457600080fd5b8101908080356bffffffffffffffffffffffff1916906020019092919050505061017c565b005b3480156100a757600080fd5b5061017a600480360360408110156100be57600080fd5b8101908080356bffffffffffffffffffffffff19169060200190929190803590602001906401000000008111156100f457600080fd5b82018360208201111561010657600080fd5b8035906020019184600183028401116401000000008311171561012857600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506104e5565b005b6060600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166306c2fab6836040518263ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180826bffffffffffffffffffffffff19166bffffffffffffffffffffffff1916815260200191505060006040518083038186803b15801561022b57600080fd5b505afa15801561023f573d6000803e3d6000fd5b505050506040513d6000823e3d601f19601f8201168201806040525061010081101561026a57600080fd5b8101908080519060200190929190805190602001909291908051906020019092919080516401000000008111156102a057600080fd5b828101905060208101848111156102b657600080fd5b81518560018202830111640100000000821117156102d357600080fd5b505092919060200180516401000000008111156102ef57600080fd5b8281019050602081018481111561030557600080fd5b815185600182028301116401000000008211171561032257600080fd5b5050929190602001805164010000000081111561033e57600080fd5b8281019050602081018481111561035457600080fd5b815185600182028301116401000000008211171561037157600080fd5b5050929190602001805164010000000081111561038d57600080fd5b828101905060208101848111156103a357600080fd5b81518560018202830111640100000000821117156103c057600080fd5b505092919060200180516401000000008111156103dc57600080fd5b828101905060208101848111156103f257600080fd5b815185600182028301116401000000008211171561040f57600080fd5b50509291905050509750505050505050507e778e9fa0ba34f99199cfee2f120c8c7e2296d3d4fb4d1b4c2556cfa2a6fc11828260405180836bffffffffffffffffffffffff19166bffffffffffffffffffffffff1916815260200180602001828103825283818151815260200191508051906020019080838360005b838110156104a657808201518184015260208101905061048b565b50505050905090810190601f1680156104d35780820380516001836020036101000a031916815260200191505b50935050505060405180910390a15050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16633fafc99983836040518363ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180836bffffffffffffffffffffffff19166bffffffffffffffffffffffff1916815260200180602001828103825283818151815260200191508051906020019080838360005b838110156105b4578082015181840152602081019050610599565b50505050905090810190601f1680156105e15780820380516001836020036101000a031916815260200191505b509350505050600060405180830381600087803b15801561060157600080fd5b505af1158015610615573d6000803e3d6000fd5b50505050505056fea165627a7a723058203c3466b3e93a6873ab3bf5651855948c91fac7a24df28ab366a554f0834d10fd0029",
+  "sourceMap": "25:1358:2:-;;;486:275;8:9:-1;5:2;;;30:1;27;20:12;5:2;486:275:2;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;486:275:2;;;;;;19:11:-1;14:3;11:20;8:2;;;44:1;41;34:12;8:2;71:11;66:3;62:21;55:28;;123:4;118:3;114:14;159:9;141:16;138:31;135:2;;;182:1;179;172:12;135:2;219:3;213:10;330:9;325:1;311:12;307:20;289:16;285:43;282:58;261:11;247:12;244:29;233:115;230:2;;;361:1;358;351:12;230:2;0:372;;486:275:2;;;;;;;;;;;;;;;;;571:8;561:7;;:18;;;;;;;;;;;;;;;;;;599:7;;;;;;;;;;;589:3;;:18;;;;;;;;;;;;;;;;;;630:11;617:10;:24;;;;;;;;;;;;:::i;:::-;;663:10;651:9;;:22;;;;;;;;;;;;;;;;;;721:3;;;;;;;;;;;:20;;;742:11;721:33;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;721:33:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;721:33:2;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;721:33:2;;;;486:275;;25:1358;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "25:1358:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;771:468;;8:9:-1;5:2;;;30:1;27;20:12;5:2;771:468:2;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;771:468:2;;;;;;;;;;;;;;;;;;;;;;;1249:132;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1249:132:2;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1249:132:2;;;;;;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;1249:132:2;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;1249:132:2;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;1249:132:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;1249:132:2;;;;;;;;;;;;;;;;;;771:468;1050:18;1072:3;;;;;;;;;;;:15;;;1088:6;1072:23;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1072:23:2;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1072:23:2;;;;;;39:16:-1;36:1;17:17;2:54;1072:23:2;101:4:-1;97:9;90:4;84;80:15;76:31;69:5;65:43;126:6;120:4;113:20;0:138;13:3;8;5:12;2:2;;;30:1;27;20:12;2:2;1072:23:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;19:11:-1;14:3;11:20;8:2;;;44:1;41;34:12;8:2;71:11;66:3;62:21;55:28;;123:4;118:3;114:14;159:9;141:16;138:31;135:2;;;182:1;179;172:12;135:2;219:3;213:10;330:9;325:1;311:12;307:20;289:16;285:43;282:58;261:11;247:12;244:29;233:115;230:2;;;361:1;358;351:12;230:2;0:372;;1072:23:2;;;;;;;19:11:-1;14:3;11:20;8:2;;;44:1;41;34:12;8:2;71:11;66:3;62:21;55:28;;123:4;118:3;114:14;159:9;141:16;138:31;135:2;;;182:1;179;172:12;135:2;219:3;213:10;330:9;325:1;311:12;307:20;289:16;285:43;282:58;261:11;247:12;244:29;233:115;230:2;;;361:1;358;351:12;230:2;0:372;;1072:23:2;;;;;;;19:11:-1;14:3;11:20;8:2;;;44:1;41;34:12;8:2;71:11;66:3;62:21;55:28;;123:4;118:3;114:14;159:9;141:16;138:31;135:2;;;182:1;179;172:12;135:2;219:3;213:10;330:9;325:1;311:12;307:20;289:16;285:43;282:58;261:11;247:12;244:29;233:115;230:2;;;361:1;358;351:12;230:2;0:372;;1072:23:2;;;;;;;19:11:-1;14:3;11:20;8:2;;;44:1;41;34:12;8:2;71:11;66:3;62:21;55:28;;123:4;118:3;114:14;159:9;141:16;138:31;135:2;;;182:1;179;172:12;135:2;219:3;213:10;330:9;325:1;311:12;307:20;289:16;285:43;282:58;261:11;247:12;244:29;233:115;230:2;;;361:1;358;351:12;230:2;0:372;;1072:23:2;;;;;;;19:11:-1;14:3;11:20;8:2;;;44:1;41;34:12;8:2;71:11;66:3;62:21;55:28;;123:4;118:3;114:14;159:9;141:16;138:31;135:2;;;182:1;179;172:12;135:2;219:3;213:10;330:9;325:1;311:12;307:20;289:16;285:43;282:58;261:11;247:12;244:29;233:115;230:2;;;361:1;358;351:12;230:2;0:372;;1072:23:2;;;;;;1035:60;;;;;;;;;1202:30;1219:6;1227:4;1202:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1202:30:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;771:468;;:::o;1249:132::-;1337:3;;;;;;;;;;;:20;;;1358:6;1366:7;1337:37;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;1337:37:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1337:37:2;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1337:37:2;;;;1249:132;;:::o",
+  "source": "pragma solidity ^0.5.0;\n\ncontract TestSite {\n    // Address of LIT core for registration and call back\n    address addrLIT;\n    LIT lit;\n    // Address of the owner of the testsite\n    address addrOwner;\n    // This string describe the capability of a testsite. Will update in the future with more description\n    string capability;\n    \n    // This event is for interacting with the client library on the infrastructure\n    event experimentStaged(bytes20 expID, string code);\n    \n    constructor (string memory _capability, address _addrLIT) public {\n        addrLIT = _addrLIT;\n        lit = LIT(addrLIT);\n        capability = _capability;\n        addrOwner = msg.sender;\n        \n        // Register with LIT\n        lit.registerTestSite(_capability);\n    }\n    \n    function assignExperiment(bytes20 _expID) public{\n        // Get a reference of the LIT to access the experiment record\n        // (bytes20 id, address creator, string memory input, string memory measurement, string memory code) = lit.experiments(_expID);\n        (, , , , , , , string memory code) = lit.experiments(_expID);\n        // string memory code = \"busy box\";\n        // emit experimentStaged(_expID, code);\n        emit experimentStaged(_expID, code);\n    }\n    \n    function updateExperimentResult(bytes20 _expID, string memory _result) public {\n        lit.updateExperiment(_expID, _result);\n    }\n}\n\ncontract LIT {\n    // This struct represents an experiment to be conducted by LIT\n    struct Experiment {\n        bytes20 id;\n        uint state;\n        address creator;\n        string homepage;\n        string relatedArtifact;\n        string input;\n        string measurement;\n        string code;\n    }\n\n    struct ExperimentResult {\n        address respondedTestSite;\n        string result;\n    }\n    \n    mapping(bytes20 => ExperimentResult[]) results;\n\n    // Mapping between capabilities and relevant testsites\n    // TEMPORARY NOT USING THIS ONE IN VERSION 0.1 DUE TO SECURITY ISSUE WITH INLINE ASSEMBLY\n    // mapping (bytes32 => address[]) public capabilityTestSites;\n\n    address[] public testSites;\n\n    // Mapping between experiment and their ID\n    mapping (bytes20 => Experiment) public experiments;\n    // Mapping between address of LIT users and a nonce for creating experiment ID\n    // If nonce is 0, it means that this user has not started an experiment before\n    mapping (address => uint) public userNonce;\n\n    mapping(address => bytes20[]) public userExperiments;\n\n    event experimentSubmitted(\n        bytes20 expID\n    );\n    event experimentAssigned(\n        bytes20 expID\n    );\n    event experimentCompleted(\n        bytes20 expID\n    );\n    \n    enum ExperimentType {Created, Submitted, Assigned, Completed}\n\n    function registerTestSite(string memory _capability) public {\n        // capabilityTestSites[stringToBytes32(_capability)].push(msg.sender);\n        testSites.push(msg.sender);\n    }\n    \n    function getNumberOfResults(bytes20 _expID) public view returns (uint) {\n        return results[_expID].length;\n    }\n    \n    function getExperimentResult(bytes20 _expID, uint index) public view returns (address, string memory) {\n        return (results[_expID][index].respondedTestSite, results[_expID][index].result);\n    }\n    \n    function createExperiment(string memory _homepage, string memory _relatedArtifact, string memory _input, string memory _measurement, string memory _code) public returns(bytes20 expID) {\n        address userAddr = msg.sender;\n        \n        //Create expID by hashing the sender address with a nonce\n        expID = bytes20(keccak256(abi.encodePacked(userAddr, userNonce[userAddr])));\n        userNonce[userAddr]++;\n        userExperiments[userAddr].push(expID);\n        \n        // Create and store an experiment struct\n        experiments[expID] = Experiment(expID, 0, userAddr, _homepage, _relatedArtifact, _input, _measurement, _code);\n        \n        // Emit an event to acknowledge that the experiemnt has been submitted.\n        emit experimentSubmitted(expID);\n        \n        // FOR SIMPLICITY, VERSION 0.1 CALL CONDUCT EXPERIMENT DIRECTLY.\n        conductExperiment(expID);\n        // Return the expID;\n        return expID;\n    }\n    \n    function conductExperiment(bytes20 _expID) public {\n        // Check if the experiment ID exist\n        require(experiments[_expID].id != 0, \"The specified experiment does not exist.\");\n        // Check if the caller is the owner of the experiment\n        // require(msg.sender == experiments[_expID].creator, \"Only the creator of an experiment can start it.\");\n        \n        // Find test sites that can satisfy the experiment input and measurement requirements\n        // TEMPORARY DISABLE MAPPING LOOK UP DUE TO SECURITY ISSUE WITH INLINE ASSEMBLY\n        // address[] memory relevantSites = capabilityTestSites[stringToBytes32(experiment.measurement)];\n\n        // Assign the experiment to all registered testsites for now.\n        address[] memory relevantSites = testSites;\n        \n        // For each relevant test site\n        for (uint i = 0; i < relevantSites.length; i++) {\n            // Call assign experiment from testSite\n            TestSite ts = TestSite(relevantSites[i]);\n            ts.assignExperiment(_expID);\n        }\n        \n        // Update the state of experiment\n        experiments[_expID].state = 1;\n        emit experimentAssigned(_expID);\n    }\n    \n    function updateExperiment(bytes20 _expID, string memory _result) public {\n        // VERSION 0.1 DOES NOT HANDLE EXPERIMENT FAILURE. CODE WILL BE UPDATED WITH ALTERNATIVE SCENARIOS IN LATER VERSIONS\n\n        // Check if the expID exist\n        require(experiments[_expID].id != 0, \"The specified experiment does not exist.\");\n        \n        // Check if the caller is the assigned testsite\n        // TBA\n        \n        // Update the experiment\n        address testSiteAddr = msg.sender;\n        experiments[_expID].state = 2;\n        results[_expID].push(ExperimentResult(testSiteAddr, _result));\n        \n        emit experimentCompleted(_expID);\n    }\n    \n    \n    // Utility functions\n    // STOP USING THIS FUNCTION DUE TO INLINE ASSEMPLY ISSUE\n    // function stringToBytes32(string memory source) private returns (bytes32 result) {\n    //     bytes memory tempEmptyStringTest = bytes(source);\n    //     if (tempEmptyStringTest.length == 0) {\n    //         return 0x0;\n    //     }\n    \n    //     assembly {\n    //         result := mload(add(source, 32))\n    //     }\n    // }\n}",
+  "sourcePath": "/Users/trannguyen/Documents/CodeProjects/LIT/LIT_core/contracts/TestSite.sol",
   "ast": {
-    "absolutePath": "/Users/trannguyen/Documents/CodeProjects/LIT/LIT_core/contracts/LIT.sol",
+    "absolutePath": "/Users/trannguyen/Documents/CodeProjects/LIT/LIT_core/contracts/TestSite.sol",
     "exportedSymbols": {
       "LIT": [
-        290
+        800
       ],
       "TestSite": [
-        371
+        511
       ]
     },
-    "id": 372,
+    "id": 801,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1,
+        "id": 430,
         "literals": [
           "solidity",
           "^",
@@ -95,7 +95,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:0"
+        "src": "0:23:2"
       },
       {
         "baseContracts": [],
@@ -103,20 +103,20 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 290,
+        "id": 511,
         "linearizedBaseContracts": [
-          290
+          511
         ],
-        "name": "LIT",
+        "name": "TestSite",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 18,
-            "name": "Experiment",
-            "nodeType": "StructDefinition",
-            "scope": 290,
-            "src": "113:218:0",
+            "id": 432,
+            "name": "addrLIT",
+            "nodeType": "VariableDeclaration",
+            "scope": 511,
+            "src": "107:15:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -135,7 +135,7 @@
               }
             },
             "value": null,
-            "visibility": "public",
+            "visibility": "internal",
             "canonicalName": "LIT.Experiment",
             "members": [
               {
@@ -351,11 +351,11 @@
           },
           {
             "constant": false,
-            "id": 23,
-            "name": "ExperimentResult",
-            "nodeType": "StructDefinition",
-            "scope": 290,
-            "src": "337:89:0",
+            "id": 434,
+            "name": "lit",
+            "nodeType": "VariableDeclaration",
+            "scope": 511,
+            "src": "128:7:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -375,7 +375,7 @@
               }
             },
             "value": null,
-            "visibility": "public",
+            "visibility": "internal",
             "canonicalName": "LIT.ExperimentResult",
             "members": [
               {
@@ -435,26 +435,26 @@
           },
           {
             "constant": false,
-            "id": 28,
-            "name": "results",
+            "id": 436,
+            "name": "addrOwner",
             "nodeType": "VariableDeclaration",
-            "scope": 290,
-            "src": "436:46:0",
+            "scope": 511,
+            "src": "185:17:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_bytes20_$_t_array$_t_struct$_ExperimentResult_$23_storage_$dyn_storage_$",
-              "typeString": "mapping(bytes20 => struct LIT.ExperimentResult[])"
+              "typeIdentifier": "t_address",
+              "typeString": "address"
             },
             "typeName": {
-              "id": 27,
+              "id": 435,
               "name": "address",
-              "nodeType": "Mapping",
-              "src": "436:38:0",
+              "nodeType": "ElementaryTypeName",
+              "src": "185:7:2",
               "stateMutability": "nonpayable",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_bytes20_$_t_array$_t_struct$_ExperimentResult_$23_storage_$dyn_storage_$",
-                "typeString": "mapping(bytes20 => struct LIT.ExperimentResult[])"
+                "typeIdentifier": "t_address",
+                "typeString": "address"
               },
               "keyType": {
                 "id": 24,
@@ -494,25 +494,25 @@
           },
           {
             "constant": false,
-            "id": 31,
-            "name": "testSites",
+            "id": 438,
+            "name": "capability",
             "nodeType": "VariableDeclaration",
-            "scope": 290,
-            "src": "709:26:0",
+            "scope": 511,
+            "src": "314:17:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_address_$dyn_storage",
-              "typeString": "address[]"
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
             },
             "typeName": {
-              "id": 30,
+              "id": 437,
               "name": "string",
-              "nodeType": "ArrayTypeName",
-              "src": "709:9:0",
+              "nodeType": "ElementaryTypeName",
+              "src": "314:6:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
-                "typeString": "address[]"
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
               },
               "baseType": {
                 "id": 29,
@@ -528,14 +528,14 @@
               "length": null
             },
             "value": null,
-            "visibility": "public"
+            "visibility": "internal"
           },
           {
             "anonymous": false,
             "documentation": null,
-            "id": 35,
-            "name": "experiments",
-            "nodeType": "VariableDeclaration",
+            "id": 444,
+            "name": "experimentStaged",
+            "nodeType": "EventDefinition",
             "parameters": {
               "id": 443,
               "nodeType": "ParameterList",
@@ -597,7 +597,7 @@
               ],
               "src": "447:28:2"
             },
-            "src": "789:50:0",
+            "src": "425:51:2",
             "constant": false,
             "scope": 290,
             "stateVariable": true,
@@ -955,12 +955,12 @@
               ]
             },
             "documentation": null,
-            "id": 39,
+            "id": 477,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
-            "name": "userNonce",
-            "nodeType": "VariableDeclaration",
+            "name": "",
+            "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 449,
               "nodeType": "ParameterList",
@@ -1027,8 +1027,8 @@
               "parameters": [],
               "src": "551:0:2"
             },
-            "scope": 290,
-            "src": "1011:42:0",
+            "scope": 511,
+            "src": "486:275:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public",
@@ -1265,12 +1265,12 @@
               ]
             },
             "documentation": null,
-            "id": 44,
+            "id": 495,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
-            "name": "userExperiments",
-            "nodeType": "VariableDeclaration",
+            "name": "assignExperiment",
+            "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 480,
               "nodeType": "ParameterList",
@@ -1310,8 +1310,8 @@
               "parameters": [],
               "src": "819:0:2"
             },
-            "scope": 290,
-            "src": "1060:52:0",
+            "scope": 511,
+            "src": "771:468:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public",
@@ -1459,23 +1459,23 @@
               ]
             },
             "documentation": null,
-            "id": 48,
+            "id": 510,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
-            "name": "experimentSubmitted",
-            "nodeType": "EventDefinition",
+            "name": "updateExperimentResult",
+            "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 47,
+              "id": 500,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 46,
-                  "name": "expID",
+                  "id": 497,
+                  "name": "_expID",
                   "nodeType": "VariableDeclaration",
-                  "scope": 48,
-                  "src": "1154:13:0",
+                  "scope": 510,
+                  "src": "1281:14:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1483,10 +1483,10 @@
                     "typeString": "bytes20"
                   },
                   "typeName": {
-                    "id": 45,
+                    "id": 496,
                     "name": "bytes20",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1154:7:0",
+                    "src": "1281:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes20",
                       "typeString": "bytes20"
@@ -1523,7 +1523,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1144:29:0"
+              "src": "1280:39:2"
             },
             "returnParameters": {
               "id": 501,
@@ -1532,7 +1532,7 @@
               "src": "1327:0:2"
             },
             "scope": 511,
-            "src": "1119:55:0",
+            "src": "1249:132:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public",
@@ -4651,8 +4651,8 @@
             "visibility": "public"
           }
         ],
-        "scope": 372,
-        "src": "27:5106:0"
+        "scope": 801,
+        "src": "25:1358:2"
       },
       {
         "baseContracts": [],
@@ -4660,16 +4660,16 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 371,
+        "id": 800,
         "linearizedBaseContracts": [
-          371
+          800
         ],
-        "name": "TestSite",
+        "name": "LIT",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "LIT.Experiment",
-            "id": 292,
+            "id": 528,
             "members": [
               {
                 "constant": false,
@@ -4881,11 +4881,11 @@
                 "visibility": "internal"
               }
             ],
-            "name": "addrLIT",
-            "nodeType": "VariableDeclaration",
-            "scope": 371,
-            "src": "5217:15:0",
-            "visibility": "internal",
+            "name": "Experiment",
+            "nodeType": "StructDefinition",
+            "scope": 800,
+            "src": "1471:218:2",
+            "visibility": "public",
             "constant": false,
             "stateVariable": true,
             "storageLocation": "default",
@@ -4908,7 +4908,7 @@
           },
           {
             "canonicalName": "LIT.ExperimentResult",
-            "id": 294,
+            "id": 533,
             "members": [
               {
                 "constant": false,
@@ -4964,11 +4964,11 @@
                 "visibility": "internal"
               }
             ],
-            "name": "lit",
-            "nodeType": "VariableDeclaration",
-            "scope": 371,
-            "src": "5238:7:0",
-            "visibility": "internal",
+            "name": "ExperimentResult",
+            "nodeType": "StructDefinition",
+            "scope": 800,
+            "src": "1695:89:2",
+            "visibility": "public",
             "constant": false,
             "stateVariable": true,
             "storageLocation": "default",
@@ -4992,19 +4992,19 @@
           },
           {
             "constant": false,
-            "id": 296,
-            "name": "addrOwner",
+            "id": 538,
+            "name": "results",
             "nodeType": "VariableDeclaration",
-            "scope": 371,
-            "src": "5295:17:0",
+            "scope": 800,
+            "src": "1794:46:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_address",
-              "typeString": "address"
+              "typeIdentifier": "t_mapping$_t_bytes20_$_t_array$_t_struct$_ExperimentResult_$533_storage_$dyn_storage_$",
+              "typeString": "mapping(bytes20 => struct LIT.ExperimentResult[])"
             },
             "typeName": {
-              "id": 295,
+              "id": 537,
               "keyType": {
                 "id": 534,
                 "name": "bytes20",
@@ -5015,11 +5015,11 @@
                   "typeString": "bytes20"
                 }
               },
-              "nodeType": "ElementaryTypeName",
-              "src": "5295:7:0",
+              "nodeType": "Mapping",
+              "src": "1794:38:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_address",
-                "typeString": "address"
+                "typeIdentifier": "t_mapping$_t_bytes20_$_t_array$_t_struct$_ExperimentResult_$533_storage_$dyn_storage_$",
+                "typeString": "mapping(bytes20 => struct LIT.ExperimentResult[])"
               },
               "valueType": {
                 "baseType": {
@@ -5051,16 +5051,16 @@
           },
           {
             "constant": false,
-            "id": 298,
-            "name": "capability",
+            "id": 541,
+            "name": "testSites",
             "nodeType": "VariableDeclaration",
-            "scope": 371,
-            "src": "5424:17:0",
+            "scope": 800,
+            "src": "2067:26:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_string_storage",
-              "typeString": "string"
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
             },
             "typeName": {
               "baseType": {
@@ -5074,26 +5074,26 @@
                   "typeString": "address"
                 }
               },
-              "id": 297,
+              "id": 540,
               "length": null,
-              "nodeType": "ElementaryTypeName",
-              "src": "5424:6:0",
+              "nodeType": "ArrayTypeName",
+              "src": "2067:9:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_string_storage_ptr",
-                "typeString": "string"
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
               },
               "name": "string"
             },
             "value": null,
-            "visibility": "internal"
+            "visibility": "public"
           },
           {
             "constant": false,
-            "id": 304,
-            "name": "experimentStaged",
-            "nodeType": "EventDefinition",
+            "id": 545,
+            "name": "experiments",
+            "nodeType": "VariableDeclaration",
             "scope": 800,
-            "src": "5535:51:0",
+            "src": "2147:50:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -5199,11 +5199,11 @@
           },
           {
             "constant": false,
-            "id": 337,
-            "name": "",
-            "nodeType": "FunctionDefinition",
-            "scope": 371,
-            "src": "5596:275:0",
+            "id": 549,
+            "name": "userNonce",
+            "nodeType": "VariableDeclaration",
+            "scope": 800,
+            "src": "2369:42:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -5629,11 +5629,11 @@
           },
           {
             "constant": false,
-            "id": 355,
-            "name": "assignExperiment",
-            "nodeType": "FunctionDefinition",
-            "scope": 371,
-            "src": "5881:468:0",
+            "id": 554,
+            "name": "userExperiments",
+            "nodeType": "VariableDeclaration",
+            "scope": 800,
+            "src": "2418:52:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -5923,21 +5923,21 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 370,
-            "name": "updateExperimentResult",
-            "nodeType": "FunctionDefinition",
+            "id": 558,
+            "name": "experimentSubmitted",
+            "nodeType": "EventDefinition",
             "parameters": {
-              "id": 360,
+              "id": 557,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 357,
+                  "id": 556,
                   "indexed": false,
-                  "name": "_expID",
+                  "name": "expID",
                   "nodeType": "VariableDeclaration",
-                  "scope": 370,
-                  "src": "6391:14:0",
+                  "scope": 558,
+                  "src": "2512:13:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -5945,10 +5945,10 @@
                     "typeString": "bytes20"
                   },
                   "typeName": {
-                    "id": 356,
+                    "id": 555,
                     "name": "bytes20",
                     "nodeType": "ElementaryTypeName",
-                    "src": "6391:7:0",
+                    "src": "2512:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes20",
                       "typeString": "bytes20"
@@ -5984,9 +5984,9 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "6390:39:0"
+              "src": "2502:29:2"
             },
-            "src": "6359:132:0",
+            "src": "2477:55:2",
             "body": {
               "id": 369,
               "nodeType": "Block",
@@ -9208,27 +9208,27 @@
             "visibility": "public"
           }
         ],
-        "scope": 372,
-        "src": "5135:1358:0"
+        "scope": 801,
+        "src": "1385:5106:2"
       }
     ],
-    "src": "0:6493:0"
+    "src": "0:6491:2"
   },
   "legacyAST": {
-    "absolutePath": "/Users/trannguyen/Documents/CodeProjects/LIT/LIT_core/contracts/LIT.sol",
+    "absolutePath": "/Users/trannguyen/Documents/CodeProjects/LIT/LIT_core/contracts/TestSite.sol",
     "exportedSymbols": {
       "LIT": [
-        290
+        800
       ],
       "TestSite": [
-        371
+        511
       ]
     },
-    "id": 372,
+    "id": 801,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1,
+        "id": 430,
         "literals": [
           "solidity",
           "^",
@@ -9236,7 +9236,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:0"
+        "src": "0:23:2"
       },
       {
         "baseContracts": [],
@@ -9244,20 +9244,20 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 290,
+        "id": 511,
         "linearizedBaseContracts": [
-          290
+          511
         ],
-        "name": "LIT",
+        "name": "TestSite",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 18,
-            "name": "Experiment",
-            "nodeType": "StructDefinition",
-            "scope": 290,
-            "src": "113:218:0",
+            "id": 432,
+            "name": "addrLIT",
+            "nodeType": "VariableDeclaration",
+            "scope": 511,
+            "src": "107:15:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -9276,7 +9276,7 @@
               }
             },
             "value": null,
-            "visibility": "public",
+            "visibility": "internal",
             "canonicalName": "LIT.Experiment",
             "members": [
               {
@@ -9492,11 +9492,11 @@
           },
           {
             "constant": false,
-            "id": 23,
-            "name": "ExperimentResult",
-            "nodeType": "StructDefinition",
-            "scope": 290,
-            "src": "337:89:0",
+            "id": 434,
+            "name": "lit",
+            "nodeType": "VariableDeclaration",
+            "scope": 511,
+            "src": "128:7:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -9516,7 +9516,7 @@
               }
             },
             "value": null,
-            "visibility": "public",
+            "visibility": "internal",
             "canonicalName": "LIT.ExperimentResult",
             "members": [
               {
@@ -9576,26 +9576,26 @@
           },
           {
             "constant": false,
-            "id": 28,
-            "name": "results",
+            "id": 436,
+            "name": "addrOwner",
             "nodeType": "VariableDeclaration",
-            "scope": 290,
-            "src": "436:46:0",
+            "scope": 511,
+            "src": "185:17:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_bytes20_$_t_array$_t_struct$_ExperimentResult_$23_storage_$dyn_storage_$",
-              "typeString": "mapping(bytes20 => struct LIT.ExperimentResult[])"
+              "typeIdentifier": "t_address",
+              "typeString": "address"
             },
             "typeName": {
-              "id": 27,
+              "id": 435,
               "name": "address",
-              "nodeType": "Mapping",
-              "src": "436:38:0",
+              "nodeType": "ElementaryTypeName",
+              "src": "185:7:2",
               "stateMutability": "nonpayable",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_bytes20_$_t_array$_t_struct$_ExperimentResult_$23_storage_$dyn_storage_$",
-                "typeString": "mapping(bytes20 => struct LIT.ExperimentResult[])"
+                "typeIdentifier": "t_address",
+                "typeString": "address"
               },
               "keyType": {
                 "id": 24,
@@ -9635,25 +9635,25 @@
           },
           {
             "constant": false,
-            "id": 31,
-            "name": "testSites",
+            "id": 438,
+            "name": "capability",
             "nodeType": "VariableDeclaration",
-            "scope": 290,
-            "src": "709:26:0",
+            "scope": 511,
+            "src": "314:17:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_address_$dyn_storage",
-              "typeString": "address[]"
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
             },
             "typeName": {
-              "id": 30,
+              "id": 437,
               "name": "string",
-              "nodeType": "ArrayTypeName",
-              "src": "709:9:0",
+              "nodeType": "ElementaryTypeName",
+              "src": "314:6:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
-                "typeString": "address[]"
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
               },
               "baseType": {
                 "id": 29,
@@ -9669,14 +9669,14 @@
               "length": null
             },
             "value": null,
-            "visibility": "public"
+            "visibility": "internal"
           },
           {
             "anonymous": false,
             "documentation": null,
-            "id": 35,
-            "name": "experiments",
-            "nodeType": "VariableDeclaration",
+            "id": 444,
+            "name": "experimentStaged",
+            "nodeType": "EventDefinition",
             "parameters": {
               "id": 443,
               "nodeType": "ParameterList",
@@ -9738,7 +9738,7 @@
               ],
               "src": "447:28:2"
             },
-            "src": "789:50:0",
+            "src": "425:51:2",
             "constant": false,
             "scope": 290,
             "stateVariable": true,
@@ -10096,12 +10096,12 @@
               ]
             },
             "documentation": null,
-            "id": 39,
+            "id": 477,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
-            "name": "userNonce",
-            "nodeType": "VariableDeclaration",
+            "name": "",
+            "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 449,
               "nodeType": "ParameterList",
@@ -10168,8 +10168,8 @@
               "parameters": [],
               "src": "551:0:2"
             },
-            "scope": 290,
-            "src": "1011:42:0",
+            "scope": 511,
+            "src": "486:275:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public",
@@ -10406,12 +10406,12 @@
               ]
             },
             "documentation": null,
-            "id": 44,
+            "id": 495,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
-            "name": "userExperiments",
-            "nodeType": "VariableDeclaration",
+            "name": "assignExperiment",
+            "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 480,
               "nodeType": "ParameterList",
@@ -10451,8 +10451,8 @@
               "parameters": [],
               "src": "819:0:2"
             },
-            "scope": 290,
-            "src": "1060:52:0",
+            "scope": 511,
+            "src": "771:468:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public",
@@ -10600,23 +10600,23 @@
               ]
             },
             "documentation": null,
-            "id": 48,
+            "id": 510,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
-            "name": "experimentSubmitted",
-            "nodeType": "EventDefinition",
+            "name": "updateExperimentResult",
+            "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 47,
+              "id": 500,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 46,
-                  "name": "expID",
+                  "id": 497,
+                  "name": "_expID",
                   "nodeType": "VariableDeclaration",
-                  "scope": 48,
-                  "src": "1154:13:0",
+                  "scope": 510,
+                  "src": "1281:14:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -10624,10 +10624,10 @@
                     "typeString": "bytes20"
                   },
                   "typeName": {
-                    "id": 45,
+                    "id": 496,
                     "name": "bytes20",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1154:7:0",
+                    "src": "1281:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes20",
                       "typeString": "bytes20"
@@ -10664,7 +10664,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1144:29:0"
+              "src": "1280:39:2"
             },
             "returnParameters": {
               "id": 501,
@@ -10673,7 +10673,7 @@
               "src": "1327:0:2"
             },
             "scope": 511,
-            "src": "1119:55:0",
+            "src": "1249:132:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public",
@@ -13792,8 +13792,8 @@
             "visibility": "public"
           }
         ],
-        "scope": 372,
-        "src": "27:5106:0"
+        "scope": 801,
+        "src": "25:1358:2"
       },
       {
         "baseContracts": [],
@@ -13801,16 +13801,16 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 371,
+        "id": 800,
         "linearizedBaseContracts": [
-          371
+          800
         ],
-        "name": "TestSite",
+        "name": "LIT",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "LIT.Experiment",
-            "id": 292,
+            "id": 528,
             "members": [
               {
                 "constant": false,
@@ -14022,11 +14022,11 @@
                 "visibility": "internal"
               }
             ],
-            "name": "addrLIT",
-            "nodeType": "VariableDeclaration",
-            "scope": 371,
-            "src": "5217:15:0",
-            "visibility": "internal",
+            "name": "Experiment",
+            "nodeType": "StructDefinition",
+            "scope": 800,
+            "src": "1471:218:2",
+            "visibility": "public",
             "constant": false,
             "stateVariable": true,
             "storageLocation": "default",
@@ -14049,7 +14049,7 @@
           },
           {
             "canonicalName": "LIT.ExperimentResult",
-            "id": 294,
+            "id": 533,
             "members": [
               {
                 "constant": false,
@@ -14105,11 +14105,11 @@
                 "visibility": "internal"
               }
             ],
-            "name": "lit",
-            "nodeType": "VariableDeclaration",
-            "scope": 371,
-            "src": "5238:7:0",
-            "visibility": "internal",
+            "name": "ExperimentResult",
+            "nodeType": "StructDefinition",
+            "scope": 800,
+            "src": "1695:89:2",
+            "visibility": "public",
             "constant": false,
             "stateVariable": true,
             "storageLocation": "default",
@@ -14133,19 +14133,19 @@
           },
           {
             "constant": false,
-            "id": 296,
-            "name": "addrOwner",
+            "id": 538,
+            "name": "results",
             "nodeType": "VariableDeclaration",
-            "scope": 371,
-            "src": "5295:17:0",
+            "scope": 800,
+            "src": "1794:46:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_address",
-              "typeString": "address"
+              "typeIdentifier": "t_mapping$_t_bytes20_$_t_array$_t_struct$_ExperimentResult_$533_storage_$dyn_storage_$",
+              "typeString": "mapping(bytes20 => struct LIT.ExperimentResult[])"
             },
             "typeName": {
-              "id": 295,
+              "id": 537,
               "keyType": {
                 "id": 534,
                 "name": "bytes20",
@@ -14156,11 +14156,11 @@
                   "typeString": "bytes20"
                 }
               },
-              "nodeType": "ElementaryTypeName",
-              "src": "5295:7:0",
+              "nodeType": "Mapping",
+              "src": "1794:38:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_address",
-                "typeString": "address"
+                "typeIdentifier": "t_mapping$_t_bytes20_$_t_array$_t_struct$_ExperimentResult_$533_storage_$dyn_storage_$",
+                "typeString": "mapping(bytes20 => struct LIT.ExperimentResult[])"
               },
               "valueType": {
                 "baseType": {
@@ -14192,16 +14192,16 @@
           },
           {
             "constant": false,
-            "id": 298,
-            "name": "capability",
+            "id": 541,
+            "name": "testSites",
             "nodeType": "VariableDeclaration",
-            "scope": 371,
-            "src": "5424:17:0",
+            "scope": 800,
+            "src": "2067:26:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_string_storage",
-              "typeString": "string"
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
             },
             "typeName": {
               "baseType": {
@@ -14215,26 +14215,26 @@
                   "typeString": "address"
                 }
               },
-              "id": 297,
+              "id": 540,
               "length": null,
-              "nodeType": "ElementaryTypeName",
-              "src": "5424:6:0",
+              "nodeType": "ArrayTypeName",
+              "src": "2067:9:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_string_storage_ptr",
-                "typeString": "string"
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
               },
               "name": "string"
             },
             "value": null,
-            "visibility": "internal"
+            "visibility": "public"
           },
           {
             "constant": false,
-            "id": 304,
-            "name": "experimentStaged",
-            "nodeType": "EventDefinition",
+            "id": 545,
+            "name": "experiments",
+            "nodeType": "VariableDeclaration",
             "scope": 800,
-            "src": "5535:51:0",
+            "src": "2147:50:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -14340,11 +14340,11 @@
           },
           {
             "constant": false,
-            "id": 337,
-            "name": "",
-            "nodeType": "FunctionDefinition",
-            "scope": 371,
-            "src": "5596:275:0",
+            "id": 549,
+            "name": "userNonce",
+            "nodeType": "VariableDeclaration",
+            "scope": 800,
+            "src": "2369:42:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -14770,11 +14770,11 @@
           },
           {
             "constant": false,
-            "id": 355,
-            "name": "assignExperiment",
-            "nodeType": "FunctionDefinition",
-            "scope": 371,
-            "src": "5881:468:0",
+            "id": 554,
+            "name": "userExperiments",
+            "nodeType": "VariableDeclaration",
+            "scope": 800,
+            "src": "2418:52:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -15064,21 +15064,21 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 370,
-            "name": "updateExperimentResult",
-            "nodeType": "FunctionDefinition",
+            "id": 558,
+            "name": "experimentSubmitted",
+            "nodeType": "EventDefinition",
             "parameters": {
-              "id": 360,
+              "id": 557,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 357,
+                  "id": 556,
                   "indexed": false,
-                  "name": "_expID",
+                  "name": "expID",
                   "nodeType": "VariableDeclaration",
-                  "scope": 370,
-                  "src": "6391:14:0",
+                  "scope": 558,
+                  "src": "2512:13:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -15086,10 +15086,10 @@
                     "typeString": "bytes20"
                   },
                   "typeName": {
-                    "id": 356,
+                    "id": 555,
                     "name": "bytes20",
                     "nodeType": "ElementaryTypeName",
-                    "src": "6391:7:0",
+                    "src": "2512:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes20",
                       "typeString": "bytes20"
@@ -15125,9 +15125,9 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "6390:39:0"
+              "src": "2502:29:2"
             },
-            "src": "6359:132:0",
+            "src": "2477:55:2",
             "body": {
               "id": 369,
               "nodeType": "Block",
@@ -18349,11 +18349,11 @@
             "visibility": "public"
           }
         ],
-        "scope": 372,
-        "src": "5135:1358:0"
+        "scope": 801,
+        "src": "1385:5106:2"
       }
     ],
-    "src": "0:6493:0"
+    "src": "0:6491:2"
   },
   "compiler": {
     "name": "solc",
@@ -18361,7 +18361,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-05-30T14:14:14.255Z",
+  "updatedAt": "2019-07-01T08:35:34.841Z",
   "devdoc": {
     "methods": {}
   },

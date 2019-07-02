@@ -42,7 +42,9 @@ App = {
     // This is only for development. It is insecure for production.
     else {
       console.log("No injected web3")
-      App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
+      //FIXME:
+      // Move the configuration out to an external JSON file
+      App.web3Provider = new Web3.providers.HttpProvider('http://129.127.231.38:7545');
     }
     web3 = new Web3(App.web3Provider)
 
