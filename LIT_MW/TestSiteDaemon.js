@@ -57,9 +57,10 @@ class DaemonClass {
         console.log("\nInside executeExperiment method:");
         console.log("ExpID:" + this.web3.utils.bytesToHex(_expID));
         console.log("Exp code: " + _code);
-        console.log("NO DOCKER AT THE MOMENT!")
+        // console.log("NO DOCKER AT THE MOMENT!")
 
         // TEMPORARY DISABLE DOCKER DUE TO DEVELOPMENT ENVIRONMENT
+
         const Docker = require('dockerode');
         const docker = new Docker();
         docker.createContainer({Image: "gecko8/lite-server", Cmd: [], "HostConfig": {

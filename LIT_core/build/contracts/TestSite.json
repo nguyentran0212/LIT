@@ -18361,7 +18361,11 @@
   },
   "networks": {},
   "schemaVersion": "3.0.9",
+<<<<<<< HEAD
   "updatedAt": "2019-07-01T08:35:34.841Z",
+=======
+  "updatedAt": "2019-05-31T00:24:08.617Z",
+>>>>>>> Commit from my Mac
   "devdoc": {
     "methods": {}
   },

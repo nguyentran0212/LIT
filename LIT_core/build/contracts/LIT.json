@@ -18570,12 +18570,21 @@
     "5777": {
       "events": {},
       "links": {},
+<<<<<<< HEAD
       "address": "0xf238a8C76A84b9FA016885a1dcC62Fe608851eA8",
       "transactionHash": "0xe0436ef83f07a46946eeee565c1a990bffdb7d39c2cfacc4d7babb134d586c80"
     }
   },
   "schemaVersion": "3.0.9",
   "updatedAt": "2019-07-01T08:35:34.809Z",
+=======
+      "address": "0x85c6539660f27d47b53dC499fbbe32cCBbAe4681",
+      "transactionHash": "0x9cc995facb089d1b103885213d14a14c8e7663441091f164cdc8dd488a9ed361"
+    }
+  },
+  "schemaVersion": "3.0.9",
+  "updatedAt": "2019-05-31T00:24:08.584Z",
+>>>>>>> Commit from my Mac
   "devdoc": {
     "methods": {}
   },

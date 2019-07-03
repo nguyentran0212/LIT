@@ -227,6 +227,7 @@ App = {
           // }).catch(error => {
           //   console.log(error)
           // });
+          alert("Your experiment has been created. You can see it in the experiment management page.");
           return;
         }
         
