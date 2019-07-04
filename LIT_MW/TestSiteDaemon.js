@@ -57,42 +57,78 @@ class DaemonClass {
         console.log("\nInside executeExperiment method:");
         console.log("ExpID:" + this.web3.utils.bytesToHex(_expID));
         console.log("Exp code: " + _code);
-        // console.log("NO DOCKER AT THE MOMENT!")
 
-        // TEMPORARY DISABLE DOCKER DUE TO DEVELOPMENT ENVIRONMENT
+        const hostAddr = "129.127.231.38"
+        const knownImages = {
+            "grafana" : hostAddr + ":3000",
+            "lite-server" : hostAddr + ":8080",
+        };
 
         const Docker = require('dockerode');
         const docker = new Docker();
-        docker.createContainer({Image: "gecko8/lite-server", Cmd: [], "HostConfig": {
-            "PortBindings": {
-            "3000/tcp": [
-                {
-                "HostPort": "5000"   //Map container to a random unused port.
-                }
-            ]
-            }, "Binds": ["/Users/trannguyen/Documents/CodeProjects/LIT/LIT_MW/sample/web-template:/src"]}}, function (err, container) {
-            if(!err){
-                container.start(function (err, data) {
-                    console.log('container started')
-                    //...
-                });
-            } else {
-                console.log(err)
-            }
-        });
+        let result = "";
+
+        if (_code in knownImages) {
+            /*FIXME: Docker by itself does not allow the flexibility and complexity necessary to run an experiment.
+                Future version will interface with Docker-compose instead.
+            */
+
+            // docker.createContainer({Image: _code, Cmd: [], "HostConfig": {
+            //     "PortBindings": {
+            //     "3000/tcp": [
+            //         {
+            //         "HostPort": knownImages[_code].split(":")[1] // Get port by splitting the hostaddr:port string.
+            //         }
+            //     ]
+            //     }, "Binds": ["/Users/trannguyen/Documents/CodeProjects/LIT/LIT_MW/sample/web-template:/src"]}}, function (err, container) {
+            //     if(!err){
+            //         container.start(function (err, data) {
+            //             console.log('container started')
+            //             //...
+            //         });
+            //     } else {
+            //         console.log(err)
+            //     }
+            // });
+
+            // docker.createContainer({Image: _code, Cmd: [], "HostConfig": {
+            //     "PortBindings": {
+            //     "3000/tcp": [
+            //         {
+            //         "HostPort": knownImages[_code].split(":")[1] // Get port by splitting the hostaddr:port string.
+            //         }
+            //     ]
+            //     }}}, function (err, container) {
+            //     if(!err){
+            //         container.start(function (err, data) {
+            //             console.log('container started')
+            //             //...
+            //         });
+            //     } else {
+            //         console.log(err)
+            //     }
+            // });
+            // FIXME: Results must come from the Docker engine itself, or other means, not hardcoded.
+            result = knownImages[_code];
+        } else {
+            result = "Couldn't find the required experiment code at the specified location";
+        }
+
+        
 
         // VERSION 0.1 USE THIS MECHANISM TO KICKSTART THE ASYNC RESPONSE.
         // IN FUTURE VERSION, THE COLLECT RESULT WILL BE CALLED WHEN THE EXPERIMENT IS DONE.
-        setTimeout((this.collectResult).bind(this), 3000, _expID);
+        setTimeout((this.collectResult).bind(this), 3000, _expID, result);
     }
 
-    collectResult(_expID) {
+    // FIXME: Version 0.1 only return the address to access a container, which is hardcoded. 
+    collectResult(_expID, _result) {
         console.log("\nInside collectResult method:");
         console.log("ExpID:" + this.web3.utils.bytesToHex(_expID));
 
         // VERSION 0.1 HAVE HARDCODED RESULT. IT IS ONLY FOR DEMONSTRATION PURPOSE
-        let result = "http://127.0.0.1:5000";
-        this.reportExperimentResult(_expID, result);
+        // let result = "http://127.0.0.1:5000";
+        this.reportExperimentResult(_expID, _result);
     }
 
     reportExperimentResult(_expID, _result) {
@@ -103,7 +139,7 @@ class DaemonClass {
         // Submit the result back to the smart contract
         this.contractInstance.methods.updateExperimentResult(this.web3.utils.bytesToHex(_expID), _result).send({
             from : this.addrOwner,
-            gas : 100000,
+            gas : 3000000,
         }).then((receipt) => {
             console.log("\nReported the experiment result to the contract.")
             // console.log(receipt);

@@ -1,7 +1,7 @@
 {
-    "ownerAcc" : "0x1EB248FBcD35059E3f3bff67692EB8d8CBc812C6",
-    "addrTestSite" : "0xeF2500B8E31D1999f07209ce9468dc64BB10AB69",
-    "addrLIT" : "0x85c6539660f27d47b53dC499fbbe32cCBbAe4681",
+    "ownerAcc" : "0x2cE47089eD8733830aE5AdcB5A79cAA86cB189Ec",
+    "addrTestSite" : "",
+    "addrLIT" : "0xDD3830883B8f6DE4Ee0B05530C33e7ff1D031CC2",
     "addrRPC" : "ws://localhost:7545",
     "addrContractArtifact" : "./"
 }
