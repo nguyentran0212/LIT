@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/exp-man-style.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+        <title>Create an experiment</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="row">
+                        <p class="logo_text">LIT</p>
+                        <!--FIXME: make the account loading properly-->
+                        <p class="acc_text">0xcabDD90A518F379B349eE374270bc59204cd3A33</p>
+                </div>
+            </nav>
+            <div class="row">
+                    <div class="hero-text-box">
+                            <h1>Create your new experiment</h1>
+                    </div>
+            </div>
+        </header>
+
+        <section>
+            <div class='row'>
+                <h2>Basic Info</h2>
+                <p class="desc-text">Let the world know more about your experiment.</p>
+            </div>
+            <div class='row'>
+                <!--FIXME: Display this field again when the exp name is supported-->
+                <!--
+                <div class='col span-1-of-3'>
+                <input type="text" name="_name" id="name" placeholder="Your experiment's name">
+                </div>
+                -->
+                <div class='col span-1-of-2'>
+                    <input class='col span-1-of-3' type="text" name="_homepage" id="homepage" placeholder="Where to find out more?">
+                </div>
+                <div class='col span-1-of-2'>
+                    <input class='col span-1-of-3' type="text" name="_artifact" id="artifact" placeholder="Additional artifacts">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class='row'>
+                <h2>Experiment Code</h2>
+                <p class="desc-text">Let your experiment be found, be it on a public or a private repository.</p>
+            </div>
+            <div class="row">
+                <fieldset>
+                        <div class="box-option">
+                            <input type="radio" name="experiment.option" id="experiment-radio-DHub" value="DHub" checked=True style="margin-bottom: 5px"/>
+                            <label for="experiment-radio-DHub" class=checkmark>
+                                <h3>Docker Hub</h3>
+                                <p>Retrieve your experiment code from Docker Hub</p>
+                            </label>
+                        </div>
+                        <div class="box-option">
+                            <input type="radio" name="experiment.option" id="experiment-radio-PHub" value="PHub"/>
+                            <label for="experiment-radio-PHub" class=checkmark>
+                                <h3>Private Registry</h3>
+                                <p>Retrieve your experiment code from a private registry</p>
+                            </label>
+                        </div>
+                        <div class="box-option">
+                            <input type="radio" name="experiment.option" id="experiment-radio-IPFS" value="IPFS"/>
+                            <label for="experiment-radio-IPFS">
+                                <h3>IPFS</h3>
+                                <p>Retrieve your experiment code from an IPFS cluster</p>
+                            </label>
+                        </div>
+
+                        <input type="text" name="_codeLocator" id="experiment-locator" placeholder="Locator" style="margin-top: 10px; width: 70%; margin-left: 15%">
+                </fieldset>
+            </div>
+        </section>
+
+        <section>
+            <div class="row">
+                <h2>Experiment Input</h2>
+                <p class="desc-text">Your experiment needs. Test sites can provide.</p>
+            </div>
+            
+            <div class="row">
+                <fieldset>
+                        <div class="box-option">
+                                <input type="radio" name="input.option" id="input-radio-metrics" checked=True value="metrics"/>
+                                <label for="input-radio-metrics">
+                                    <h3>System Metrics</h3>
+                                    <p>Performance of your testsite. For double checking the connectivity.</p>
+                                </label>
+                            </div>
+                            <div class="box-option">
+                                <input type="radio" name="input.option" id="input-radio-TI" value="TI"/>
+                                <label for="input-radio-TI">
+                                    <h3>One TI CC1350</h3>
+                                    <p>Connect to one multi-modal sensor.</p>
+                                </label>
+                            </div>
+                            <div class="box-option">
+                                <input type="radio" name="input.option" id="input-radio-customised" value="customised"/>
+                                <label for="input-radio-customised">
+                                    <h3>Customised input</h3>
+                                    <p>Define more fine-grained input requirement.</p>
+                                </label>
+                            </div>
+                </fieldset>
+            </div>
+            
+        </section>
+
+        <section>
+            <div class="row">
+                <h2>Experiment Output</h2>
+                <p class="desc-text">What to measure? You ask, test sites provide. Simple and immutable.</p>
+            </div>
+            
+            <div class="row">
+                <fieldset>
+                        <div class="box-option">
+                                <input type="radio" name="output.option" id="output-radio-access" checked=True value="access"/>
+                                <label for="output-radio-access">
+                                    <h3>Access</h3>
+                                    <p>Access your code remotely. So you know it works.</p>
+                                </label>
+                            </div>
+                            <div class="box-option">
+                                <input type="radio" name="output.option" id="output-radio-metrics" value="metrics"/>
+                                <label for="output-radio-metrics">
+                                    <h3>Performance Metrics</h3>
+                                    <p>Measure your code's performance on a test site.</p>
+                                </label>
+                            </div>
+                            <div class="box-option">
+                                <input type="radio" name="output.option" id="output-radio-customised" value="customised"/>
+                                <label for="output-radio-customised">
+                                    <h3>Customised output</h3>
+                                    <p>Define more fine-grained output requirement.</p>
+                                </label>
+                            </div>
+                </fieldset>
+            </div>
+        </section>
+
+        <section>
+            <div class='row'>
+                <h2>Almost there</h2>
+                <p class='desc-text'>Your experiment is almost ready. Before moving on, please have double check all the details.
+                    <br/>In the next step, your wallet would ask you to approve a transaction, so that LIT can deploy your experiment on to the chain.</p>
+            </div>
+            <div class="row" style="text-align: center">
+                <a class="btn btn-full btn-submit" href="#">Create the Experiment</a>
+            </div>
+        </section>
+
+        <footer>
+                <div class="row">
+                    <div class="col span-1-of-2">
+                        <ul class="footer-nav">
+                            <li><a href="tknguyen.me">About us</a></li>
+                            <li><a href="tknguyen.me">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="col span-1-of-2">
+                        <ul class="social-links">
+                            <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                            <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                            <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                            <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <p>
+                        Ledger-enabled IoT Testbed is a part of an intiative by the University of Adelaide, School of Computer Science, and CREST group to create an infrastructure for advancing Australian research and development in the Internet of Things.
+                    </p>
+                    <p>
+                        Build with <i class="ion-ios-heart" style="color: #ea0000; padding: 0 3px;"></i> in the beautiful city of Adelaide, Australia, May 2019.
+                    </p>
+                </div>
+            </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app-create-exp.js"></script>
+    </body>
+</html>

@@ -1377,21 +1377,12 @@
     "5777": {
       "events": {},
       "links": {},
-<<<<<<< HEAD
-      "address": "0x4d770236Ac2Fb9074eD5B1c0D6b1d87378932605",
-      "transactionHash": "0x52f6ee723de2faa46a21548df712dec9a881c5fc48b9651005dfe33ad08fca62"
+      "address": "0x1827e42FA966CcCdF37301a3a9228b475c130baC",
+      "transactionHash": "0x30a775327e2f3425d78bc036bc78d7f5ffffca5e4d4dfc6349a87234b98d903a"
     }
   },
   "schemaVersion": "3.0.9",
-  "updatedAt": "2019-07-01T08:35:34.850Z",
-=======
-      "address": "0x08f42797112dAe4Ae01249773F7e1883b933b3c6",
-      "transactionHash": "0x994cdd26f11b7f9eeb164f5b1fcf46295607eb8becdae894040b16554e0bed5a"
-    }
-  },
-  "schemaVersion": "3.0.9",
-  "updatedAt": "2019-05-31T00:24:08.626Z",
->>>>>>> Commit from my Mac
+  "updatedAt": "2019-07-04T06:20:42.759Z",
   "devdoc": {
     "methods": {}
   },
