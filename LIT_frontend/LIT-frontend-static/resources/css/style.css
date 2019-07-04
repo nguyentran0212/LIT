@@ -34,6 +34,10 @@ body {
     visibility: hidden;
 }
 
+fieldset {
+    border: none;
+}
+
 /* ----------------------------------------------- */
 /* REUSABLE COMPONENTS */
 /* ----------------------------------------------- */
@@ -212,17 +216,30 @@ input[type=submit]:active {
 /* ----------------------------------------------- */
 /* RADIO BOX */
 /* ----------------------------------------------- */
-.box-option:hover{
-    background-color: #ccc;
+.box-option {
+    margin: 15px;
+}
+
+.box-option input {
+    display: none;
+}
+
+.box-option label {
+    display: block;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+}
+
+.box-option label:hover{
+    border: 2px solid #888;
+    cursor: pointer;
+    transition: border 0.35s;
 }
 
 .box-option input:checked ~ label {
-    background-color: #2196F3;
-}
-
-.box-option {
-    padding: 20px;
-    border-radius: 10px;
+    border: 2px solid #2196F3;
+    transition: border 0.2s;
 }
 
 /* ----------------------------------------------- */

@@ -34,7 +34,7 @@
                     <input class='col span-1-of-3' type="text" name="_homepage" id="homepage" placeholder="Where to find out more?">
                 </div>
                 <div class='col span-1-of-3'>
-                        <input class='col span-1-of-3' type="text" name="_artifact" id="artifact" placeholder="Additional artifacts">
+                    <input class='col span-1-of-3' type="text" name="_artifact" id="artifact" placeholder="Additional artifacts">
                 </div>
             </div>
         </section>
@@ -62,13 +62,12 @@
                         </div>
                         <div class="box-option">
                             <input type="radio" name="experiment.option" id="experiment-radio-IPFS" value="IPFS"/>
-                            <div>
+                            <label for="experiment-radio-IPFS">
                                 <h3>IPFS</h3>
-                                <label for="experiment-radio-IPFS">Retrieve your experiment code from an IPFS cluster</label>
-                            </div>
+                                <p>Retrieve your experiment code from an IPFS cluster</p>
+                            </label>
                         </div>
 
-                        
                         <input type="text" name="_codeLocator" id="experiment-locator" placeholder="Locator" style="margin-top: 10px; width: 70%; margin-left: 15%">
                 </fieldset>
             </div>
@@ -84,24 +83,24 @@
                 <fieldset>
                         <div class="box-option">
                                 <input type="radio" name="input.option" id="input-radio-metrics" checked=True value="metrics"/>
-                                <div>
+                                <label for="input-radio-metrics">
                                     <h3>System Metrics</h3>
-                                    <label for="input-radio-metrics">Performance of your testsite. For double checking the connectivity.</label>
-                                </div>
+                                    <p>Performance of your testsite. For double checking the connectivity.</p>
+                                </label>
                             </div>
                             <div class="box-option">
                                 <input type="radio" name="input.option" id="input-radio-TI" value="TI"/>
-                                <div>
+                                <label for="input-radio-TI">
                                     <h3>One TI CC1350</h3>
-                                    <label for="input-radio-TI">Connect to one multi-modal sensor.</label>
-                                </div>
+                                    <p>Connect to one multi-modal sensor.</p>
+                                </label>
                             </div>
                             <div class="box-option">
                                 <input type="radio" name="input.option" id="input-radio-customised" value="customised"/>
-                                <div>
+                                <label for="input-radio-customised">
                                     <h3>Customised input</h3>
-                                    <label for="input-radio-customised">Define more fine-grained input requirement.</label>
-                                </div>
+                                    <p>Define more fine-grained input requirement.</p>
+                                </label>
                             </div>
                 </fieldset>
             </div>
@@ -118,24 +117,24 @@
                 <fieldset>
                         <div class="box-option">
                                 <input type="radio" name="output.option" id="output-radio-access" checked=True value="access"/>
-                                <div>
+                                <label for="output-radio-access">
                                     <h3>Access</h3>
-                                    <label for="output-radio-access">Access your code remotely. So you know it works.</label>
-                                </div>
+                                    <p>Access your code remotely. So you know it works.</p>
+                                </label>
                             </div>
                             <div class="box-option">
                                 <input type="radio" name="output.option" id="output-radio-metrics" value="metrics"/>
-                                <div>
+                                <label for="output-radio-metrics">
                                     <h3>Performance Metrics</h3>
-                                    <label for="output-radio-metrics">Measure your code's performance on a test site.</label>
-                                </div>
+                                    <p>Measure your code's performance on a test site.</p>
+                                </label>
                             </div>
                             <div class="box-option">
                                 <input type="radio" name="output.option" id="output-radio-customised" value="customised"/>
-                                <div>
+                                <label for="output-radio-customised">
                                     <h3>Customised output</h3>
-                                    <label for="output-radio-customised">Define more fine-grained output requirement.</label>
-                                </div>
+                                    <p>Define more fine-grained output requirement.</p>
+                                </label>
                             </div>
                 </fieldset>
             </div>
