@@ -55,7 +55,7 @@ App = {
 
       // FIXME
       // Move the location code outside
-      App.web3Provider = new Web3.providers.HttpProvider('http://129.127.231.38:7545');
+      App.web3Provider = new Web3.providers.HttpProvider('http://129.127.231.237:7545');
     }
     web3 = new Web3(App.web3Provider)
 
